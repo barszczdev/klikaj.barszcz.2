@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="pl" >
+<head>
+<script>
+var wyd1 = false;
+var wyd2 = false;
+var wyd3 = false;
+var wyd4 = false;
+var wyd5 = false;
+var wyd6 = false;
+var wyd7 = false;
+var wyd8 = false;
+window.setInterval(function(){
+        zdarzenia1()
+		zdarzenia2()
+		zdarzenia3()
+		zdarzenia4()
+		zdarzenia5()
+		zdarzenia6()
+		zdarzenia7()
+		zdarzenia8()
+}, 1000);
+function zdarzenia1() {
+     if (wyd1 != true && barszcz >= 10){
+	     window.alert("Zarabiasz tak dużo że musisz już płacić 19% podatku Belki.");
+         wyd1 = true;
+	 }
+	 else {
+	 }
+};
+function zdarzenia2() {
+     if (wyd2 != true && barszcz >= 1000){
+	     window.alert("Otrzymujesz subsydia dla młodych, początkujących rolnikow w wysokości 500 barszczów.");
+         barszcz = barszcz + 500;
+         wyd2 = true;
+var snd = new Audio("zasoby/subsydia.mp3");
+snd.play();
+snd.currentTime=0;	
+	 }
+	 else {
+	 }
+};
+function zdarzenia3() {
+     if (wyd3 != true && barszcz >= 10000){
+	     window.alert("Wzrosła kwota podatku Belki do 19% i musisz go teraz opłacić. Płacisz 2000 barszczów. ");
+		 barszcz = barszcz - 2000;
+		 wyd3 = true;
+		 var snd = new Audio("zasoby/pod.mp3");
+	snd.play();
+	snd.currentTime=0;	
+	 }
+}
+function zdarzenia4() {
+     if (wyd4 != true && barszcz >= 100000){
+	     window.alert("Kupujesz prawa budowlane, ponieważ mogą ci się przydać w przyszłości.");
+		 barszcz = barszcz - 20000;
+		 wyd4 = true;
+	var snd = new Audio("zasoby/prawa.mp3");
+	snd.play();
+	snd.currentTime=0;	
+	 }
+}
+function zdarzenia5() {
+     if (wyd5 != true && barszcz >= 1000000){
+	     window.alert("Księżniczki Peach i Daisy spędziły noc z Mariem i Luigim, ich zdrowie się zwiekszyło, co powoduje wzrost kosztów korzystania z aktualnych Banhammer Bros'ów.");
+		 dyw4 = mloty * 25000;
+		 barszcz = barszcz - dyw4;
+		 wyd5 = true;
+		 		 	var snd = new Audio("zasoby/cen.mp3");
+	snd.play();
+	snd.currentTime=0;		
+	 }
+}
+function zdarzenia6() {
+     if (wyd6 != true && barszcz >= 10000000){
+	     window.alert("Ronald Rump podziwia twoje wyczyny i udzielił ci małej pożyczki w wysokości miliona barszczów.");
+		 barszcz = barszcz + 1000000;
+		 wyd6 = true;
+		 	var snd = new Audio("zasoby/poz.mp3");
+	snd.play();
+	snd.currentTime=0;		
+	 }
+}
+function zdarzenia7() {
+     if (wyd7 != true && barszcz >= 100000000){
+	     window.alert("Obrońcy praw zwierząt z nieznanego powodu wygrali nieznaną ci sprawę w sądzie, która zakończyła się zmuszeniem cię do grzywny o wysokości całego twojego majątku na rzecz zwierząt.");
+		 barszcz = barszcz - 100000000;
+		 wyd7 = true;
+		 	var snd = new Audio("zasoby/obroncy.mp3");
+	snd.play();
+	snd.currentTime=0;		
+	 }
+}
+function zdarzenia8() {
+     if (wyd8 != true && barszcz >= 1000000000){
+	     window.alert("Noir jest zestresowany z powodu wymagań 6.0 na zwolnienie z egzaminów. Antyderpesanty sporo kosztują");
+		 barszcz = barszcz - 500000000;
+		 wyd8 = true;
+		 	var snd = new Audio("zasoby/stres.mp3");
+	snd.play();
+	snd.currentTime=0;		
+	 }
+}
+function zapiszgre() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.clickcount) {
+            localStorage.clickcount = barszcz;
+			
+
+        } else {
+		    localStorage.clickcount = barszcz;
+        }
+        document.getElementById("result").innerHTML = "Zapisano.";
+    } else {
+        document.getElementById("result").innerHTML = "Twoja przeglądarka nie obsługuje takich zapisów.";
+    }
+}
+function wczytajgre() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.clickcount) {
+		   var wczytywanie = parseInt(localStorage.clickcount)
+		    barszcz = wczytywanie;
+        } else {
+            var wczytywanie = parseInt(localStorage.clickcount)
+		    barszcz = wczytywanie;
+        }
+        document.getElementById("result2").innerHTML = "Wczytano.";
+    } else {
+        document.getElementById("result").innerHTML = "Twoja przeglądarka nie obsługuje takich zapisów.";
+    }
+}
+	var snd = new Audio("zasoby/mz.mp3");
+	snd.play();
+	snd.currentTime=0;	
+window.setInterval(function(){
+	var snd = new Audio("zasoby/mz.mp3");
+	snd.play();
+	snd.currentTime=0;	
+}, 14150);
+window.setInterval(function(){
+        document.getElementById("result").innerHTML = "Nie zapisano.";
+	    document.getElementById("result2").innerHTML = "Nie wczytano.";
+}, 5000);
+window.setInterval(function(){
+        localStorage.clickcount = barszcz + 1;
+}, 5000);
+    var barszcz = 0;
+    var mockliku = 1;
+	var kosztkliku = 50;
+	var kosztklikuu = 50;
+	var plusklik = 50;
+	function plusklik1() {
+	if(barszcz >= kosztkliku){ 
+	var snd = new Audio("zasoby/barszcz.mp3");
+	snd.play();
+	snd.currentTime=0;
+        barszcz = barszcz - kosztkliku;
+        mockliku = mockliku * 2;                                      
+        kosztkliku = kosztkliku	* 3;
+        document.getElementById('plusklik').innerHTML = kosztkliku;  
+        document.getElementById('barszcze').innerHTML = barszcz;  
+		document.getElementById('mockliku').innerHTML = mockliku;  
+		};
+    }
+window.setInterval(function(){
+ dodksiazki()
+ dodsuchary()
+ dodcydr()
+ dodstudnia()
+ dodptak()
+ dodfabryka()
+ dodmlot()
+ dodpepe()
+ dodleroy()
+ dodtransport()
+ dodnoir()
+ ps()
+ nasekunde()
+ document.getElementById('mockliku').innerHTML = plik;  
+}, 1000);
+	 function nasekunde() {
+	  var sekundena = 0;
+      var nasekunde = 0;
+	 nasekundee = sucharps + dodatekzeksiazek + cydrps + ptakps + studniaps + mlotps + pepeps + leroyps + noirps + transportps ;
+	 document.getElementById('sekundena').value = nasekundee;
+	 };
+    function dodksiazki() {
+	if (ksiazki != 0) {
+		dodatekzeksiazek = ksiazki * upksiazki;
+        barszcz = barszcz + dodatekzeksiazek;
+        document.getElementById('barszcze').value = barszcz;
+		};
+    };
+	    function dodsuchary() {
+		if (suchar != 0) {
+		dodatekzsucharow = suchar * upsuchar;
+		dodatekzsucharow2 = dodatekzsucharow * 4;
+        barszcz = barszcz + dodatekzsucharow2;
+        document.getElementById('barszcze').value = barszcz;
+		};
+    }
+		function dodcydr() {
+	    if (cydr != 0) {
+		dodatekzcydru = cydr * 10;
+		dodatekzcydru2 = dodatekzcydru * upcydr;
+        barszcz = barszcz + dodatekzcydru2;
+        document.getElementById('barszcze').value = barszcz;
+		};
+    }
+		function dodstudnia() {
+		if (studnia != 0) {
+		dodatekzestudni = studnia * 50;
+		dodatekzestudni2 = dodatekzestudni * upstudnia;
+        barszcz = barszcz + dodatekzestudni2;
+        document.getElementById('barszcze').value = barszcz;
+		};
+    }
+	    function dodptak() {
+		if (ptak != 0) {
+		dodatekzptakow = ptak * 200;
+		dodatekzptakow2 = dodatekzptakow * upptak;
+        barszcz = barszcz + dodatekzptakow2;
+        document.getElementById('barszcze').value = barszcz;
+		};
+    }
+	    function dodfabryka() {
+		if (fabryka != 0) {
+		dodatekzfabryk = fabryka * 1000;
+		dodatekzfabryk2 = dodatekzfabryk * upfabryka;
+        barszcz = barszcz + dodatekzfabryk2;
+        document.getElementById('barszcze').value = barszcz;
+		};
+    }
+		function dodmlot() {
+		if (mloty != 0) {
+		dodatekzmlotow = mloty * 6500;
+		dodatekzmlotow2 = dodatekzmlotow * upmloty;
+        barszcz = barszcz + dodatekzmlotow2;
+        document.getElementById('barszcze').value = barszcz;
+		};
+    }
+		function dodpepe() {
+		if (pepe != 0) {
+		dodatekzpepe = pepe * 40000;
+		dodatekzpepe2 = dodatekzpepe * upepe;
+        barszcz = barszcz + dodatekzpepe2;
+        document.getElementById('barszcze').value = barszcz;
+		};
+    }
+	    function dodleroy() {
+		if (leroy != 0) {
+		dodatekzleroya = leroy * 200000;
+		dodatekzleroya2 = dodatekzleroya * upleroy;
+        barszcz = barszcz + dodatekzleroya2;
+        document.getElementById('barszcze').value = barszcz;
+		};
+    }
+	    function dodtransport() {
+		if (transport != 0) {
+		dodatekztransportu = transport * 1250000;
+	    dodatekztransportu2 = dodatekztransportu * uptransport;
+        barszcz = barszcz + dodatekztransportu2;
+        document.getElementById('barszcze').value = barszcz;
+		};
+    }
+	    function dodnoir() {
+		if (noir != 0) {
+		dodatekznoira = noir * 25000000;
+		dodatekznoira2 = dodatekznoira * upnoir;
+        barszcz = barszcz + dodatekznoira2;
+        document.getElementById('barszcze').value = barszcz;
+		};
+    }
+</script>
+<link rel="stylesheet" type="text/css" href="interface.css" />
+<script type="skrypt.js" src="script.js?v=1.0.7"></script>
+<title>Kliker Barszczu - by transportowiec96</title>
+</head>
+<body>
+<script>
+var czas = 0;
+window.setInterval(function(){
+        czas = czas + 1;
+		document.getElementById("czas").innerHTML = czas;
+		barszcz = Math.floor(barszcz * 0.81);
+		document.getElementById("barszcze").innerHTML = barszcz;
+}, 30000);
+;
+</script>
+Grasz już <span id="czas">0</span> wirtualnych kwartałów.<br>
+<button onClick="zapiszgre()">Zapisz stan barszczu</button>
+<span id="result">Nie zapisano.</span>
+<button onClick="wczytajgre()">Wczytaj stan barszczu</button>
+<span id="result2">Nie wczytano.</span>
+Disclaimer: Działanie upgradów lepszych od książek  błędne działa. Formuła kosztów upgradów: kosztpoprzedni * 5. 
+W okienkach możesz prowadzić notatnik upgradów.
+<input type="type" id="aaaaa" value="100 * 5 = 500"></input>
+<input type="type" id="aaaaa" value="500 * 5 = 2500"></input>
+<input type="type" id="aaaaa" value=""></input>
+<input type="type" id="aaaaa" value=""></input>
+<input type="type" id="aaaaa" value=""></input>
+<input type="type" id="aaaaa" value=""></input>
+<input type="type" id="aaaaa" value=""></input>
+<input type="type" id="aaaaa" value=""></input>
+<input type="type" id="aaaaa" value=""></input>
+<input type="type" id="aaaaa" value=""></input>
+<input type="type" id="aaaaa" value=""></input>
+<input type="type" id="aaaaa" value=""></input>
+<input type="type" id="aaaaa" value=""></input>
+<br>
+<!-- klikanie w barszcz -->
+
+
+<br>
+<script>
+    function klik() {
+	var snd = new Audio("zasoby/barszcz.mp3");
+	snd.play();
+	snd.currentTime=0; 
+        barszcz = barszcz + mockliku;
+        document.getElementById('barszcze').value = barszcz;
+    }
+</script>
+<button src="zasoby/barszcz.png" onclick="klik();"><img src="zasoby/barszcz.png"></button>
+<br>
+Posiadasz: <input type="submit" id="barszcze" value="0"></input> barszczu.<br>
+Twoja moc klikania wynosi <span id="mockliku">1</span>
+<button onclick="plusklik1()">Podwój moc kliku.<br>Koszt: <span id="plusklik">50</span></button><br>
+<script>
+var ksiazki = 0;
+var kosztksiazki = 10;
+var kosztksiazkii = 10;
+	function kupksiazke(){
+    if(barszcz >= kosztksiazki){   
+	var snd = new Audio("zasoby/ksiazka.mp3");
+	snd.play();
+	snd.currentTime=0;	
+        ksiazki = ksiazki + 1;                                   
+    	barszcz = barszcz - kosztksiazki;    
+        kosztksiazki = kosztksiazki	+ 3;
+        document.getElementById('ksiazkii').innerHTML = ksiazki;  
+        document.getElementById('barszcze').innerHTML = barszcz;  
+		document.getElementById('kosztksiazkii').innerHTML = kosztksiazki;  
+    };
+};
+	var upksiazki = 1;
+    var kosztupksiazki = 100;
+    var kosztupksiazkii = 100;
+	function kupupksiazke(){
+    if(barszcz >= kosztupksiazki){   
+	var snd = new Audio("zasoby/ksiazka.mp3");
+	snd.play();
+	snd.currentTime=0;	
+        upksiazki = upksiazki + 1;                                   
+    	barszcz = barszcz - kosztupksiazki;    
+        kosztupksiazki = kosztupksiazki	* 5;
+        document.getElementById('upksiazkii').innerHTML = upksiazki;  
+        document.getElementById('barszcze').innerHTML = barszcz;  
+		document.getElementById('upkosztksiazkii').innerHTML = kosztupksiazki;  
+    };
+};
+</script>
+<button onClick="kupksiazke()"><img src="zasoby/nauka.png"></button>
+<button onClick="kupupksiazke()">Zwiększ moc nauki o 100%<br>Koszt <span id="upkosztksiazkii">100</span></button><br>
+Książki: <span id="ksiazkii">0</span></br>
+Dają <span id="upksiazkii">1</span> przepis(ów) na barszcz na sekundę.
+Koszt: <span id="kosztksiazkii">10</span>
+<script>
+function showDiv3() {
+   if (barszcz > 99){
+   document.getElementById('divsuchar').style.display = "block";
+   document.getElementById('divsuchar2').style.display = "none";
+   }
+   else
+   {
+   window.alert("Nie masz tyle barszczu!");
+   }
+}
+</script>
+<div id="divsuchar2"  style="display:block;" class="answer_list" >
+<input type="button" name="answer" value="Kliknij po osiągnięciu 100 barszczu." onclick="showDiv3()" /></div>
+<div id="divsuchar"  style="display:none;" class="answer_list" >
+<script>
+var suchar = 0;
+var kosztsuchara = 100;
+var kosztsucharaa = 100;
+		function kupsuchara(){
+    if(barszcz >= kosztsuchara){ 
+	var snd = new Audio("zasoby/suchar.mp3");
+	snd.play();
+	snd.currentTime=0;		
+        suchar = suchar + 1;                                   
+    	barszcz = barszcz - kosztsuchara;    
+        kosztsuchara = kosztsuchara	+ 10;
+        document.getElementById('suchary').innerHTML = suchar;  
+        document.getElementById('barszcze').innerHTML = barszcz;  
+		document.getElementById('kosztsucharaa').innerHTML = kosztsuchara;  
+    };
+};
+	var upsuchar = 1;
+	var upsuchar2 = 4;
+    var kosztupsuchara = 500;
+	var sucharps = 4;
+	function kupujsuchara(){
+    if(barszcz >= kosztupsuchara){   
+	var snd = new Audio("zasoby/suchar.mp3");
+	snd.play();
+	snd.currentTime=0;	
+        upsuchar = upsuchar + 1;  		
+    	barszcz = barszcz - kosztupsuchara;    
+        kosztupsuchara = kosztupsuchara	* 5;
+		sucharps = upsuchar * 4;
+        document.getElementById('upsuchary').innerHTML = upsuchar;		
+        document.getElementById('barszcze').innerHTML = barszcz;  
+		document.getElementById('sucharpss').innerHTML = sucharps;  
+    };
+};
+</script>
+<button onClick="kupsuchara()"><img src="zasoby/suchar.png"></button>
+<button onClick="kupujsuchara()">Zwiększ moc wyciskania o 100%<br>Koszt <span id="aaa">500</span></button><br>
+Suchary: <span id="suchary">0</span></br>
+Niestety są mokre ze względu na moczenie w barszczu. Dają <span id="sucharpss">4</span> barszcze na sekundę.<br>
+Koszt: <span id="kosztsucharaa">100</span><br><br>
+</div>
+<script>
+function showDiv2() {
+   if (barszcz > 499){
+   document.getElementById('divcydr').style.display = "block";
+   document.getElementById('divcydr2').style.display = "none";
+   }
+   else
+   {
+   window.alert("Nie masz tyle barszczu!");
+   }
+}
+</script>
+<div id="divcydr2"  style="display:block;" class="answer_list" >
+<input type="button" name="answer" value="Kliknij po osiągnięciu 500 barszczu." onclick="showDiv2()" /></div>
+<div id="divcydr"  style="display:none;" class="answer_list" >
+<script>
+var cydr = 0;
+var kosztcydru = 500;
+var kosztcydruu = 500;
+		function kupcydr(){
+    if(barszcz >= kosztcydru){ 
+	var snd = new Audio("zasoby/cydr.mp3");
+	snd.play();
+	snd.currentTime=0;		
+        cydr = cydr + 1;                                   
+    	barszcz = barszcz - kosztcydru;    
+        kosztcydru = kosztcydru	+ 100;
+        document.getElementById('cydry').innerHTML = cydr;  
+        document.getElementById('barszcze').innerHTML = barszcz;  
+		document.getElementById('kosztcydruu').innerHTML = kosztcydru;  
+    };
+};
+var upcydr = 1;
+var kosztupcydru = 3000;
+var kosztupcydra = 3000;
+		function kupujcydr(){
+    if(barszcz >= kosztupcydru){ 
+	var snd = new Audio("zasoby/cydr.mp3");
+	snd.play();
+	snd.currentTime=0;		
+        upcydr = upcydr + 1;                                   
+    	barszcz = barszcz - kosztupcydru;    
+        kosztupcydru = kosztupcydru * 5;
+        document.getElementById('upcydry').innerHTML = upcydr;  
+        document.getElementById('barszcze').innerHTML = barszcz;  
+		document.getElementById('kosztupcydra').innerHTML = kosztupcydru;  
+    };
+};
+</script>
+<button onClick="kupcydr()"><img src="zasoby/cydr.png"></button>
+<button onClick="kupujcydr()">Zwiększ charyzmę o 100%<br>Koszt <span id="kosztupcydra">3000</span></button><br>
+Fermy jabłkowe: <span id="cydry">0</span></br>
+Produkują smakowity cydr, który jest wymieniany na barszcz. Fermy dają <span id="cydrpss">10</span></br> barszczów na sekundę.<br>
+Koszt: <span id="kosztcydruu">500</span></div>
+<script>
+function showDiv() {
+   if (barszcz > 2999){
+   document.getElementById('divstudnia').style.display = "block";
+   document.getElementById('divstudnia2').style.display = "none";
+   }
+   else
+   {
+   window.alert("Nie masz tyle barszczu!");
+   }
+}
+</script>
+<div id="divstudnia2"  style="display:block;" class="answer_list" >
+<input type="button" name="answer" value="Kliknij po osiągnięciu 3,000 barszczu." onclick="showDiv()" /></div>
+<div id="divstudnia"  style="display:none;" class="answer_list" >
+<script>
+var studnia = 0;
+var kosztstudni = 3000;
+var kosztstudnii = 3000;
+		function kupstudnie(){
+    if(barszcz >= kosztstudni){ 
+	var snd = new Audio("zasoby/studnia.mp3");
+	snd.play();
+	snd.currentTime=0;		
+        studnia = studnia + 1;                                   
+    	barszcz = barszcz - kosztstudni;    
+        kosztstudni = kosztstudni + 500;
+        document.getElementById('studnie').innerHTML = studnia;  
+        document.getElementById('barszcze').innerHTML = barszcz;  
+		document.getElementById('kosztstudnii').innerHTML = kosztstudni;  
+    };
+};
+var upstudnia = 1;
+var kosztupstudni = 20000;
+var kosztupstudnii = 20000;
+		function kupujstudnie(){
+    if(barszcz >= kosztupstudni){ 
+	var snd = new Audio("zasoby/studnia.mp3");
+	snd.play();
+	snd.currentTime=0;		
+        upstudnia = upstudnia + 1;                                   
+    	barszcz = barszcz - kosztupstudni;    
+        kosztupstudni = kosztupstudni * 5;
+        document.getElementById('upstudnie').innerHTML = upstudnia;  
+        document.getElementById('barszcze').innerHTML = barszcz;  
+		document.getElementById('kosztupstudnii').innerHTML = kosztupstudni;  
+    };
+};
+</script>
+<button onClick="kupstudnie()"><img src="zasoby/studnia.png"></button>
+<button onClick="kupujstudnie()">Zwiększ wielkość studni o 100%<br>Koszt <span id="kosztupstudnii">20000</span></button><br>
+Studnie życzeń: <span id="studnie">0</span></br>
+Spełnia jedno życzenie na <span id="studniapss">50</span> barszczy na sekundę.<br>
+Koszt: <span id="kosztstudnii">3000</span>
+</div>
+<script>
+function showDiv4() {
+   if (barszcz > 19999){
+   document.getElementById('divptak').style.display = "block";
+   document.getElementById('divptak2').style.display = "none";
+   }
+   else
+   {
+   window.alert("Nie masz tyle barszczu!");
+   }
+}
+</script>
+<div id="divptak2"  style="display:block;" class="answer_list" >
+<input type="button" name="answer" value="Kliknij po osiągnięciu 20,000 barszczu." onclick="showDiv4()" /></div>
+<div id="divptak"  style="display:none;" class="answer_list" >
+<!-- ptak -->
+<script>
+var ptak = 0;
+var kosztptaka = 20000;
+var kosztptakaa = 20000;
+		function kupptaka(){
+    if(barszcz >= kosztptaka){ 
+	var snd = new Audio("zasoby/ptak.mp3");
+	snd.play();
+	snd.currentTime=0;		
+        ptak = ptak + 1;                                   
+    	barszcz = barszcz - kosztptaka;
+        kosztptaka = kosztptaka	+ 5000;
+        document.getElementById('ptaki').innerHTML = ptak;  
+        document.getElementById('barszcze').innerHTML = barszcz;  
+		document.getElementById('kosztptakaa').innerHTML = kosztptaka;  
+    };
+};
+var upptak = 1;
+var kosztupptaka = 100000;
+var kosztupptakaa = 100000;
+		function kupujptaka(){
+    if(barszcz >= kosztupptaka){ 
+	var snd = new Audio("zasoby/ptak.mp3");
+	snd.play();
+	snd.currentTime=0;		
+        upptak = upptak + 1;                                   
+    	barszcz = barszcz - kosztupptaka;
+        kosztupptaka = kosztupptaka	* 5;
+        document.getElementById('upptaki').innerHTML = upptak;  
+        document.getElementById('barszcze').innerHTML = barszcz;  
+		document.getElementById('kosztupptakaa').innerHTML = kosztupptaka;  
+    };
+};
+</script>
+<button onClick="kupptaka()"><img src="zasoby/ptak.png"></button>
+<button onClick="kupujptaka()">Zmniejsz wiatr o o 100%<br>Koszt <span id="kosztupptakaa">100000</span></button><br>
+Ptaki: <span id="ptaki">0</span></br>
+Przynoszą barszcz z Afryki. Ptaki dają <span id="ptakpss">200</span> barszczów na sekundę.<br>
+Koszt: <span id="kosztptakaa">20000</span>
+</div>
+<script>
+function showDiv5() {
+   if (barszcz > 99999){
+   document.getElementById('divfabryka').style.display = "block";
+   document.getElementById('divfabryka2').style.display = "none";
+   }
+   else
+   {
+   window.alert("Nie masz tyle barszczu!");
+   }
+}
+</script>
+<div id="divfabryka2"  style="display:block;" class="answer_list" >
+<input type="button" name="answer" value="Kliknij po osiągnięciu 100,000 barszczu." onclick="showDiv5()" /></div>
+<div id="divfabryka"  style="display:none;" class="answer_list" >
+<script>
+var fabryka= 0;
+var kosztfabryk = 100000;
+var kosztfabryka = 100000;
+		function kupfabryka(){
+    if(barszcz >= kosztfabryka){ 
+	var snd = new Audio("zasoby/fabryka.mp3");
+	snd.play();
+	snd.currentTime=0;		
+        fabryka = fabryka + 1;                                   
+    	barszcz = barszcz - kosztfabryka;    
+        kosztfabryk = kosztfabryk + 20000;
+        document.getElementById('fabryki').innerHTML = fabryka;  
+        document.getElementById('barszcze').innerHTML = barszcz;  
+		document.getElementById('kosztfabryka').innerHTML = kosztfabryk;  
+    };
+};
+var upfabryka = 1;
+var kosztupfabryk = 750000;
+var kosztupfabryka = 750000;
+		function kupujfabryka(){
+    if(barszcz >= kosztupfabryk){ 
+	var snd = new Audio("zasoby/fabryka.mp3");
+	snd.play();
+	snd.currentTime=0;		
+        upfabryka = upfabryka + 1;                                   
+    	barszcz = barszcz - kosztupfabryk;    
+        kosztupfabryk = kosztupfabryk * 5 ;
+        document.getElementById('upfabryke').innerHTML = upfabryka;  
+        document.getElementById('barszcze').innerHTML = barszcz;  
+		document.getElementById('kosztupfabryka').innerHTML = kosztupfabryk;  
+    };
+};
+</script>
+<button onClick="kupfabryka()"><img src="zasoby/fabryka.png"></button>
+<button onClick="kupujfabryka()">Popraw jakość linii produkcyjnej o 100%<br>Koszt <span id="kosztupfabryk">750000</span></button>
+<br>
+Fabryki barszczu: <span id="fabryki">0</span></br>
+Produkują barszcz z krwi i innych czerwonych rzeczy. Dają <span id="fabrykapss">1000</span> barszczów na sekundę.<br>
+Koszt: <span id="kosztfabryka">100000</span>
+</div>
+<script>
+function showDiv7() {
+   if (barszcz > 749999){
+   document.getElementById('divmlot').style.display = "block";
+   document.getElementById('divmlot2').style.display = "none";
+   }
+   else
+   {
+   window.alert("Nie masz tyle barszczu!");
+   }
+}
+</script>
+<div id="divmlot2"  style="display:block;" class="answer_list" >
+<input type="button" name="answer" value="Kliknij po osiągnięciu 750,000 barszczu." onclick="showDiv7()" /></div>
+<div id="divmlot"  style="display:none;" class="answer_list" >
+<script>
+var mloty = 0;
+var kosztmlotow = 750000;
+var kosztmlotoww = 750000;
+		function kupmlota(){
+    if(barszcz >= kosztmlotow){ 
+	var snd = new Audio("zasoby/mlot.mp3");
+	snd.play();
+	snd.currentTime=0;		
+        mloty = mloty + 1;                                   
+    	barszcz = barszcz - kosztmlotow;    
+        kosztmlotow = kosztmlotow	+ 25000;
+        document.getElementById('mlote').innerHTML = mloty;  
+        document.getElementById('barszcze').innerHTML = barszcz;  
+		document.getElementById('kosztmlotoww').innerHTML = kosztmlotow;  
+    };
+};
+var upmloty = 1;
+var kosztupmlotow = 1800000;
+var kosztupmlotoww = 1800000;
+		function kupujmlota(){
+    if(barszcz >= kosztupmlotow){ 
+	var snd = new Audio("zasoby/mlot.mp3");
+	snd.play();
+	snd.currentTime=0;		
+        upmloty = upmloty + 1;                                   
+    	barszcz = barszcz - kosztupmlotow;    
+        kosztupmlotow = kosztupmlotow * 5 ;
+        document.getElementById('upmlote').innerHTML = upmloty;  
+        document.getElementById('barszcze').innerHTML = barszcz;  
+		document.getElementById('kosztupmlotoww').innerHTML = kosztupmlotow;  
+    };
+};
+</script>
+<button onClick="kupmlota()"><img src="zasoby/mlot.png"></button>
+<button onClick="kupujmlota()">Zwiększ konskrypcję o o 100%<br>Koszt <span id="kosztupmlotoww">1800000</span></button><br>
+Banhammer Bro's: <span id="mlote">0</span></br>
+Tłuczą Mariów i Luigich na barszcz. Dają <span id="mlotpss">6500</span> barszczów na sekundę.<br>
+Koszt: <span id="kosztmlotoww">750000</span>
+</div>
+<script>
+function showDiv9() {
+   if (barszcz > 2799999){
+   document.getElementById('divpepe').style.display = "block";
+   document.getElementById('divpepe2').style.display = "none";
+   }
+   else
+   {
+   window.alert("Nie masz tyle barszczu!");
+   }
+}
+</script>
+<div id="divpepe2"  style="display:block;" class="answer_list" >
+<input type="button" name="answer" value="Kliknij po osiągnięciu 2,800,000 barszczu." onclick="showDiv9()" /></div>
+<div id="divpepe"  style="display:none;" class="answer_list" >
+<script>
+var pepe = 0;
+var kosztpepe = 2800000;
+var kosztpepee = 2800000;
+		function kuppepe(){
+    if(barszcz >= kosztpepe){ 
+	var snd = new Audio("zasoby/pepe.mp3");
+	snd.play();
+	snd.currentTime=0;		
+        pepe = pepe + 1;                                   
+    	barszcz = barszcz - kosztpepe;    
+        kosztpepe = kosztpepe + 400000;
+        document.getElementById('pepowie').innerHTML = pepe;  
+        document.getElementById('barszcze').innerHTML = barszcz;  
+		document.getElementById('kosztpepee').innerHTML = kosztpepe;  
+    };
+};
+var upepe = 1;
+var kosztuppepe = 5000000;
+var kosztuppepee = 5000000;
+		function kupujpepe(){
+    if(barszcz >= kosztuppepe){ 
+	var snd = new Audio("zasoby/pepe.mp3");
+	snd.play();
+	snd.currentTime=0;		
+        upepe = upepe + 1;                                   
+    	barszcz = barszcz - kosztuppepe;    
+        kosztuppepe = kosztuppepe * 5 ;
+        document.getElementById('uppepowie').innerHTML = upepe;  
+        document.getElementById('barszcze').innerHTML = barszcz;  
+		document.getElementById('kosztuppepee').innerHTML = kosztuppepe;  
+    };
+};
+</script>
+<button onClick="kuppepe()"><img src="zasoby/pepe.png"></button><br>
+<button onClick="kupujpepe()">Genetycznie zmodyfikuj Pepów aby produkcja wydzieliny została zwiększona o 100%<br>Koszt <span id="kosztuppepee">5000000</span></button><br>
+Pepowie: <span id="pepowie">0</span></br>
+Pepowie wydzielają barszcz, aby go zjeść, ale ty go im zabierasz. Daje ci to <span id="pepepss">40000</span> barszczów na sekundę.<br>
+Koszt: <span id="kosztpepee">2800000</span>
+</div>
+<script>
+function showDiv8() {
+   if (barszcz > 19999999){
+   document.getElementById('divleroy').style.display = "block";
+   document.getElementById('divleroy2').style.display = "none";
+   }
+   else
+   {
+   window.alert("Nie masz tyle barszczu!");
+   }
+}
+</script>
+<div id="divleroy2"  style="display:block;" class="answer_list" >
+<input type="button" name="answer" value="Kliknij po osiągnięciu 20,000,000 barszczu." onclick="showDiv8()" /></div>
+<div id="divleroy"  style="display:none;" class="answer_list" >
+<script>
+var leroy = 0;
+var kosztleroy = 20000000;
+var kosztleroya = 20000000;
+		function kupleroy(){
+    if(barszcz >= kosztleroy){ 
+	var snd = new Audio("zasoby/leroy.mp3");
+	snd.play();
+	snd.currentTime=0;		
+        leroy = leroy + 1;                                   
+    	barszcz = barszcz - kosztleroy;    
+        kosztleroy = kosztleroy	+ 2500000;
+        document.getElementById('leroi').innerHTML = leroy;  
+        document.getElementById('barszcze').innerHTML = barszcz;  
+		document.getElementById('kosztleroya').innerHTML = kosztleroy;  
+    };
+};
+var upleroy = 1;
+var kosztupleroy = 35000000;
+var kosztupleroya = 35000000;
+		function kupujleroy(){
+    if(barszcz >= kosztupleroy){ 
+	var snd = new Audio("zasoby/leroy.mp3");
+	snd.play();
+	snd.currentTime=0;		
+        upleroy = upleroy + 1;                                   
+    	barszcz = barszcz - kosztupleroy;    
+        kosztupleroy = kosztupleroy	+ 2500000;
+        document.getElementById('upleroi').innerHTML = upleroy;  
+        document.getElementById('barszcze').innerHTML = barszcz;  
+		document.getElementById('kosztupleroya').innerHTML = kosztupleroy;  
+    };
+};
+</script><br>
+<button onClick="kupleroy()"><img src="zasoby/leroy.png"></button>
+<button onClick="kupujleroy()">Twoja (i sklepu) popularność spada, jeśli to kupisz, wzrośnie o 100%<br>Koszt <span id="kosztupleroya">35000000</span></button><br>
+Vedrai Erle: <span id="leroi">0</span></br>
+Bardzo popularny sklep, inwestowanie się opłaca. Jeden daje ci <span id="leroypss">200000</span> barszczów na sekundę.<br>
+Koszt: <span id="kosztleroya">20000000</span>
+</div>
+<script>
+function showDiv0() {
+   if (barszcz > 149999999){
+   document.getElementById('divtransport').style.display = "block";
+   document.getElementById('divtransport2').style.display = "none";
+   }
+   else
+   {
+   window.alert("Nie masz tyle barszczu!");
+   }
+}
+</script>
+<div id="divtransport2"  style="display:block;" class="answer_list" >
+<input type="button" name="answer" value="Kliknij po osiągnięciu 150,000,000 barszczu." onclick="showDiv0()" /></div>
+<div id="divtransport"  style="display:none;" class="answer_list" >
+<script>
+var transport = 0;
+var koszttransportu = 150000000;
+var koszttransportuu = 150000000;
+		function kuptransport(){
+    if(barszcz >= koszttransportu){ 
+	var snd = new Audio("zasoby/transport.mp3");
+	snd.play();
+	snd.currentTime=0;		
+        transport = transport + 1;                                   
+    	barszcz = barszcz - koszttransportu;    
+        koszttransportu = koszttransportu + 10000000;
+        document.getElementById('transporty').innerHTML = transport;  
+        document.getElementById('barszcze').innerHTML = barszcz;  
+		document.getElementById('koszttransportuu').innerHTML = koszttransportu;  
+    };
+};
+var uptransport = 1;
+var kosztuptransportu = 400000000;
+var kosztuptransportuu = 400000000;
+		function kupujtransport(){
+    if(barszcz >= kosztuptransportu){ 
+	var snd = new Audio("zasoby/transport.mp3");
+	snd.play();
+	snd.currentTime=0;		
+        uptransport = uptransport + 1;                                   
+    	barszcz = barszcz - kosztuptransportu;    
+        kosztuptransportu = kosztuptransportu + 10000000;
+        document.getElementById('uptransporty').innerHTML = uptransport;  
+        document.getElementById('barszcze').innerHTML = barszcz;  
+		document.getElementById('kosztuptransportuu').innerHTML = kosztuptransportu;  
+    };
+};
+</script><br>
+<button onClick="kuptransport()"><img src="zasoby/transport.jpg"></button>
+<button onClick="kupujtransport()">Zwiększ pojemność baków paliwowych i jakość kabin dla koni o 100%<br>Koszt <span id="kosztuptransportuu">400000000</span></button><br>
+Transport Koni: <span id="transporty">0</span></br>
+Jedna z ważniejszych gałęzi transportu. Jedna firma daje ci <span id="transportpss">1250000</span> barszczów na sekundę.<br>
+Koszt: <span id="koszttransportuu">150000000</span>
+</div>
+<script>
+function showDiva() {
+   if (barszcz > 749999999){
+   document.getElementById('divnoir').style.display = "block";
+   document.getElementById('divnoir2').style.display = "none";
+   }
+   else
+   {
+   window.alert("Nie masz tyle barszczu!");
+   }
+}
+</script>
+<div id="divnoir2"  style="display:block;" class="answer_list" >
+<input type="button" name="answer" value="Kliknij po osiągnięciu 750,000,000 barszczu." onclick="showDiva()" /></div>
+<div id="divnoir"  style="display:none;" class="answer_list" >
+<script>
+var noir = 0;
+var kosztnoir = 750000000;
+var kosztnoira = 750000000;
+		function kupnoir(){
+    if(barszcz >= kosztnoir){ 
+	var snd = new Audio("zasoby/noir.mp3");
+	snd.play();
+	snd.currentTime=0;		
+        noir = noir + 1;                                   
+    	barszcz = barszcz - kosztleroy;    
+        kosztnoir = kosztnoir + 50000000;
+        document.getElementById('noire').innerHTML = noir;  
+        document.getElementById('barszcze').innerHTML = barszcz;  
+		document.getElementById('kosztnoira').innerHTML = kosztnoir;  
+    };
+};
+var upnoir = 1;
+var kosztupnoir = 3000000000;
+var kosztupnoira = 3000000000;
+		function kupujnoir(){
+    if(barszcz >= kosztupnoir){ 
+	var snd = new Audio("zasoby/noir.mp3");
+	snd.play();
+	snd.currentTime=0;		
+        upnoir = upnoir + 1;                                   
+    	barszcz = barszcz - kosztupleroy;    
+        kosztupnoir = kosztupnoir * 2;
+        document.getElementById('upnoire').innerHTML = upnoir;  
+        document.getElementById('barszcze').innerHTML = barszcz;  
+		document.getElementById('kosztupnoira').innerHTML = kosztupnoir;  
+    };
+};
+</script><br>
+<button onClick="kupnoir()"><img src="zasoby/noir.png"></button>
+<button onClick="kupujnoir()">Pracuj na projekt październikowy <br>Koszt <span id="kosztupnoira">3000000000</span></button><br><br>
+Noir: <span id="noire">0</span></br>
+Wynalazca barszczu (lub on i jego klony). Jeden z nich daje ci <span id="noirpss">25000000</span> barszczów na sekundę.<br>
+Koszt: <span id="kosztnoira">750000000</span>
+</div>
+<script>
+function showDivb() {
+   if (barszcz > 7499999999){
+   document.getElementById('divb').style.display = "block";
+   document.getElementById('divb2').style.display = "none";
+   }
+   else
+   {
+   window.alert("Nie masz tyle barszczu!");
+   }
+}
+</script>
+<div id="divb2"  style="display:block;" class="answer_list" >
+<input type="button" name="answer" value="Kliknij po osiągnięciu 7,500,000,000 barszczu." onclick="showDivb()" /></div>
+<div id="divb"  style="display:none;" class="answer_list" >
+<script>
+var win = 7347000000;
+		function kupwin(){
+    if(barszcz >= win){ 
+	var snd = new Audio("zasoby/leroy.mp3");
+	snd.play();
+	snd.currentTime=0;		                                  
+    	barszcz = barszcz - win;   
+        document.getElementById('barszcze').innerHTML = barszcz;  
+		window.alert("Brawo! Dzięki tobie każdy na Ziemii posiada swój własny barszcz! Wygrałeś w wersji 1.0! Jeżeli masz jakieś dodatkowe pomysły na rozwinięcie gry, wyślij autorowi prywatną wiadomość na discordzie.");
+    };
+};
+</script><br>
+<button onClick="kupwin()">??????????????/</button><br>
+????????????? 0<br>
+????????????????????? Daje ???????????<br>
+Koszt: <span id="kosztwin">7347000000 </span>
+</div>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
