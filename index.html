@@ -164,26 +164,9 @@ window.setInterval(function(){
     }
 window.setInterval(function(){
  dodksiazki()
- dodsuchary()
- dodcydr()
- dodstudnia()
- dodptak()
- dodfabryka()
- dodmlot()
- dodpepe()
- dodleroy()
- dodtransport()
- dodnoir()
- ps()
- nasekunde()
  document.getElementById('mockliku').innerHTML = plik;  
 }, 1000);
-	 function nasekunde() {
-	  var sekundena = 0;
-      var nasekunde = 0;
-	 nasekundee = sucharps + dodatekzeksiazek + cydrps + ptakps + studniaps + mlotps + pepeps + leroyps + noirps + transportps ;
-	 document.getElementById('sekundena').value = nasekundee;
-	 };
+
     function dodksiazki() {
 	if (ksiazki != 0) {
 		dodatekzeksiazek = ksiazki * upksiazki;
@@ -191,86 +174,7 @@ window.setInterval(function(){
         document.getElementById('barszcze').value = barszcz;
 		};
     };
-	    function dodsuchary() {
-		if (suchar != 0) {
-		dodatekzsucharow = suchar * upsuchar;
-		dodatekzsucharow2 = dodatekzsucharow * 4;
-        barszcz = barszcz + dodatekzsucharow2;
-        document.getElementById('barszcze').value = barszcz;
-		};
-    }
-		function dodcydr() {
-	    if (cydr != 0) {
-		dodatekzcydru = cydr * 10;
-		dodatekzcydru2 = dodatekzcydru * upcydr;
-        barszcz = barszcz + dodatekzcydru2;
-        document.getElementById('barszcze').value = barszcz;
-		};
-    }
-		function dodstudnia() {
-		if (studnia != 0) {
-		dodatekzestudni = studnia * 50;
-		dodatekzestudni2 = dodatekzestudni * upstudnia;
-        barszcz = barszcz + dodatekzestudni2;
-        document.getElementById('barszcze').value = barszcz;
-		};
-    }
-	    function dodptak() {
-		if (ptak != 0) {
-		dodatekzptakow = ptak * 200;
-		dodatekzptakow2 = dodatekzptakow * upptak;
-        barszcz = barszcz + dodatekzptakow2;
-        document.getElementById('barszcze').value = barszcz;
-		};
-    }
-	    function dodfabryka() {
-		if (fabryka != 0) {
-		dodatekzfabryk = fabryka * 1000;
-		dodatekzfabryk2 = dodatekzfabryk * upfabryka;
-        barszcz = barszcz + dodatekzfabryk2;
-        document.getElementById('barszcze').value = barszcz;
-		};
-    }
-		function dodmlot() {
-		if (mloty != 0) {
-		dodatekzmlotow = mloty * 6500;
-		dodatekzmlotow2 = dodatekzmlotow * upmloty;
-        barszcz = barszcz + dodatekzmlotow2;
-        document.getElementById('barszcze').value = barszcz;
-		};
-    }
-		function dodpepe() {
-		if (pepe != 0) {
-		dodatekzpepe = pepe * 40000;
-		dodatekzpepe2 = dodatekzpepe * upepe;
-        barszcz = barszcz + dodatekzpepe2;
-        document.getElementById('barszcze').value = barszcz;
-		};
-    }
-	    function dodleroy() {
-		if (leroy != 0) {
-		dodatekzleroya = leroy * 200000;
-		dodatekzleroya2 = dodatekzleroya * upleroy;
-        barszcz = barszcz + dodatekzleroya2;
-        document.getElementById('barszcze').value = barszcz;
-		};
-    }
-	    function dodtransport() {
-		if (transport != 0) {
-		dodatekztransportu = transport * 1250000;
-	    dodatekztransportu2 = dodatekztransportu * uptransport;
-        barszcz = barszcz + dodatekztransportu2;
-        document.getElementById('barszcze').value = barszcz;
-		};
-    }
-	    function dodnoir() {
-		if (noir != 0) {
-		dodatekznoira = noir * 25000000;
-		dodatekznoira2 = dodatekznoira * upnoir;
-        barszcz = barszcz + dodatekznoira2;
-        document.getElementById('barszcze').value = barszcz;
-		};
-    }
+ 
 </script>
 <link rel="stylesheet" type="text/css" href="interface.css" />
 <script type="skrypt.js" src="script.js?v=1.0.7"></script>
