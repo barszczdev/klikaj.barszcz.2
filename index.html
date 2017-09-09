@@ -2,14 +2,14 @@
 <html lang="pl" >
 <head>
 <script>
-var wyd1 = false;
-var wyd2 = false;
-var wyd3 = false;
-var wyd4 = false;
-var wyd5 = false;
-var wyd6 = false;
-var wyd7 = false;
-var wyd8 = false;
+var wyd1 = true;
+var wyd2 = true;
+var wyd3 = true;
+var wyd4 = true;
+var wyd5 = true;
+var wyd6 = true;
+var wyd7 = true;
+var wyd8 = true;
 window.setInterval(function(){
         zdarzenia1()
 		zdarzenia2()
@@ -165,7 +165,7 @@ window.setInterval(function(){
 		};
     }
 window.setInterval(function(){
- dodlas()
+ dodsuchary()
  document.getElementById('mockliku').innerHTML = plik;  
 }, 1000);
 
@@ -231,6 +231,8 @@ Twoja moc klikania wynosi <span id="mockliku">1</span>
 <script>
 function pokazostralakefunkcja() {
    if (wojsko > 9){
+   wojsko = wojsko - 10;
+   document.getElementById('wojskoo').value = wojsko;
    document.getElementById('pokazostralake').style.display = "block";
    document.getElementById('ukryjostralake').style.display = "none";
    }
@@ -238,7 +240,7 @@ function pokazostralakefunkcja() {
    {
    window.alert("Nie masz tyle barszczu!");
    }
-}
+};
 </script>
 <div id="ukryjostralake"  style="display:block;" class="answer_list" >
 <input type="button" name="answer" value="Zajmij Ostrą Łąkę. Wymaga to 10 chłopów." onclick="pokazostralakefunkcja()" /></div>
@@ -259,8 +261,6 @@ var kosztsucharaa = 100;
         document.getElementById('barszcze').innerHTML = barszcz;  
 		document.getElementById('kosztsucharaa').innerHTML = kosztsuchara;  
     };
-};
-
 };
 </script>
 <button onClick="kupsuchara()"><img src="zasoby/spoiler.png"></button><br>
