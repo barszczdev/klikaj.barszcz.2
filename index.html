@@ -169,7 +169,7 @@ window.setInterval(function(){
 	var kosztkliku = 50;
 	var kosztklikuu = 50;
 	var plusklik = 50;
-	var maxunrest = 250;
+	var maxunrest = 2500;
 	var unrest = 0;
 	function plusklik1() {
 	if(barszcz >= kosztkliku){ 
@@ -336,7 +336,7 @@ window.setInterval(function(){
 <button src="zasoby/barszcz.png" onclick="kupmilitia()"><img src="zasoby/militia.png"><br>Koszt: 10</button>
 <button src="zasoby/barszcz.png" onclick="kupmilitia2()"><img src="zasoby/dzik.png"><br>Koszt: 100</button>
 <button src="zasoby/barszcz.png" onclick="kupmilitia3()"><img src="zasoby/studenci.png"><br>Koszt: 1000</button>
-<button src="zasoby/barszcz.png" onclick="kupmilitia4()"><img src="zasoby/militia.png"><br>Koszt: 10000</button>
+<button src="zasoby/barszcz.png" onclick="kupmilitia4()"><img src="zasoby/ochroniarz.png"><br>Koszt: 10000</button>
 <button src="zasoby/barszcz.png" onclick="kupmilitia5()"><img src="zasoby/militia.png"><br>Koszt: 100000</button>
 <button src="zasoby/barszcz.png" onclick="kupmilitia6()"><img src="zasoby/militia.png"><br>Koszt: 1000000</button>
 <button src="zasoby/barszcz.png" onclick="kupmilitia7()"><img src="zasoby/militia.png"><br>Koszt: 10000000</button>
@@ -393,7 +393,7 @@ var kosztlakii = 500;
 	snd.currentTime=0;		
         laka = laka + 1;                                   
     	barszcz = barszcz - kosztlaki;  
-        unrest = unrest + 2;			
+        unrest = unrest + 20;			
         kosztlaki = kosztlaki + 50;
         document.getElementById('laki').innerHTML = laka;  
         document.getElementById('barszcze').innerHTML = barszcz;  
@@ -411,7 +411,7 @@ var kosztlasii = 3000;
 	snd.currentTime=0;		
         las = las + 1;                                   
     	barszcz = barszcz - kosztlasi;  
-        unrest = unrest + 3;			
+        unrest = unrest + 30;			
         kosztlasi= kosztlasi + 100;
         document.getElementById('lasi').innerHTML = las;  
         document.getElementById('barszcze').innerHTML = barszcz;  
@@ -486,7 +486,7 @@ var kosztpodstawaaa = 7500;
 	snd.play();
 	snd.currentTime=0;		
         podstawa = podstawa + 1;         
-        unrest = unrest + 1;		
+        unrest = unrest + 40;		
     	barszcz = barszcz - kosztpodstawaa;    
         kosztpodstawaa = kosztpodstawaa	+ 2500;
         document.getElementById('podstaway').innerHTML = podstawa;  
@@ -505,7 +505,7 @@ var koszttechnikii = 30000;
 	snd.currentTime=0;		
         technika = technika + 1;                                   
     	barszcz = barszcz - koszttechniki;  
-        unrest = unrest + 2;			
+        unrest = unrest + 50;			
         koszttechniki = koszttechniki + 10000;
         document.getElementById('techniki').innerHTML = technika;  
         document.getElementById('barszcze').innerHTML = barszcz;  
@@ -523,7 +523,7 @@ var kosztuniii = 150000;
 	snd.currentTime=0;		
         uni = uni + 1;                                   
     	barszcz = barszcz - kosztunii;  
-        unrest = unrest + 3;			
+        unrest = unrest + 60;			
         kosztunii= kosztunii + 50000;
         document.getElementById('unii').innerHTML = uni;  
         document.getElementById('barszcze').innerHTML = barszcz;  
@@ -572,6 +572,230 @@ Uczy się za ciebie.<br> Zwiększa wyspanie o 10.<br>
 Koszt: <span id="kosztmilitia3ii">2500</span><br><br></th>
 </tr></table></div>
 
+<script>
+function pokazpieklofunkcja() {
+   if (wojsko > 99999){
+   wojsko = wojsko - 100000;
+   document.getElementById('wojskoo').value = wojsko;
+   document.getElementById('pokazpieklo').style.display = "block";
+   document.getElementById('ukryjpieklo').style.display = "none";
+   }
+   else
+   {
+   window.alert("Nie masz tyle siły!");
+   }
+};
+</script>
+<div id="ukryjpieklo"  style="display:block;" class="answer_list" >
+<input type="button" name="answer" value="Zajmij Piekło. Wymaga to 100000 siły." onclick="pokazpieklofunkcja()" /></div>
+<div id="pokazpieklo"  style="display:none;" class="answer_list" >
+<script>
+var charon = 0;
+var kosztcharona = 1000000;
+var kosztcharonaa = 1000000;
+		function kupcharona(){
+    if(barszcz >= kosztcharona){ 
+	var snd = new Audio("zasoby/charon.mp3");
+	snd.play();
+	snd.currentTime=0;		
+        charon = charon + 1;         
+        unrest = unrest + 70;		
+    	barszcz = barszcz - kosztcharona;    
+        kosztcharona = kosztcharona	+ 500000;
+        document.getElementById('charony').innerHTML = charon;  
+        document.getElementById('barszcze').innerHTML = barszcz;  
+		document.getElementById('kosztcharonaa').innerHTML = kosztcharona;  
+		document.getElementById('unresty').value = unrest;
+    };
+};
+var shreka = 0;
+var kosztshreki = 15000000;
+var kosztshrekii = 15000000;
+		function kupshreke(){
+    if(barszcz >= kosztshreki){ 
+	var snd = new Audio("zasoby/shreka.mp3");
+	snd.play();
+	snd.currentTime=0;		
+        shreka = shreka + 1;                                   
+    	barszcz = barszcz - kosztshreki;  
+        unrest = unrest + 80;			
+        kosztshreki = kosztshreki + 2500000;
+        document.getElementById('shreki').innerHTML = shreka;  
+        document.getElementById('barszcze').innerHTML = barszcz;  
+		document.getElementById('kosztshrekii').innerHTML = kosztshreki;  
+		document.getElementById('unresty').value = unrest;
+    };
+};
+var szatan = 0;
+var kosztszatani = 75000000;
+var kosztszatanii = 75000000;
+		function kupszatane(){
+    if(barszcz >= kosztszatani){ 
+	var snd = new Audio("zasoby/szatan.mp3");
+	snd.play();
+	snd.currentTime=0;		
+        szatan = szatan + 1;                                   
+    	barszcz = barszcz - kosztszatani;  
+        unrest = unrest + 100;			
+        kosztszatani= kosztszatani + 15000000;
+        document.getElementById('szatani').innerHTML = szatan;  
+        document.getElementById('barszcze').innerHTML = barszcz;  
+		document.getElementById('kosztszatanii').innerHTML = kosztszatani;  
+		document.getElementById('unresty').value = unrest;
+    };
+};
+	var kosztunrest3 = 25000;
+	var kosztunrest3i= 25000;
+		 function kupmaxunrest3() {
+	 if (barszcz >= kosztunrest3) { 
+	var snd = new Audio("zasoby/sarna.mp3");
+	snd.play();
+	snd.currentTime=0; 
+        barszcz = barszcz - kosztunrest3;
+		unrest = unrest - 10;
+		kosztunrest3 = kosztunrest3 + 25000; 
+		document.getElementById('barszcze').value = barszcz;
+		document.getElementById('unrest').value = unrest;
+		document.getElementById('unresty').value = unrest;
+		document.getElementById('kosztunrest3').innerHTML = kosztunrest3; 
+		document.getElementById('kosztunrest3i').innerHTML = kosztunrest3; 
+		};
+    }
+</script>
+<table>
+<tr>
+<th>
+<button onClick="kupcharona()"><img src="zasoby/charon.png"></button><br>
+Charon: <span id="charony">0</span></br>
+Przewozi nieumarłych przez Styks. <br>Daje 20000 barszczy na sekundę.<br>
+Koszt: <span id="kosztcharonaa">1000000</span><br><br></th>
+<th>
+<button onClick="kupshreke()"><img src="zasoby/shrek.png"></button><br>
+Piekielny Shrek: <span id="shreki">0</span></br>
+Średniowieczny mem.<br> Daje 400000 barszczy na sekundę.<br>
+Koszt: <span id="kosztshrekii">15000000</span><br><br></th>
+<th>
+<button onClick="kupszatane()"><img src="zasoby/szatan.png"></button><br>
+Szatan: <span id="szatani">0</span></br>
+Kupuje dusze i sprzedaje po wyższej cenie.<br> Daje 2500000 barszczy na sekundę.<br>
+Koszt: <span id="kosztszatanii">75000000</span><br><br></th>
+<th>
+<button onClick="kupmaxunrest3()"><img src="zasoby/babcia.png"></button><br>
+Teraz się najesz, a nie tylko krakersy z wodą.<br> Zwiększa wyspanie o 10.<br>
+Koszt: <span id="kosztmilitia3ii">25000</span><br><br></th>
+</tr></table></div>
+<script>
+function pokazpepelandiafunkcja() {
+   if (wojsko > 999999){
+   wojsko = wojsko - 1000000;
+   document.getElementById('wojskoo').value = wojsko;
+   document.getElementById('pokazpepelandia').style.display = "block";
+   document.getElementById('ukryjpepelandia').style.display = "none";
+   }
+   else
+   {
+   window.alert("Nie masz tyle siły!");
+   }
+};
+</script>
+<div id="ukryjpepelandia"  style="display:block;" class="answer_list" >
+<input type="button" name="answer" value="Zajmij Pepelandię. Wymaga to 100000 siły." onclick="pokazpepelandiafunkcja()" /></div>
+<div id="pokazpepelandia"  style="display:none;" class="answer_list" >
+<script>
+var pepe = 0;
+var kosztpepea = 1000000;
+var kosztpepeaa = 1000000;
+		function kuppepea(){
+    if(barszcz >= kosztpepea){ 
+	var snd = new Audio("zasoby/pepe.mp3");
+	snd.play();
+	snd.currentTime=0;		
+        pepe = pepe + 1;         
+        unrest = unrest + 70;		
+    	barszcz = barszcz - kosztpepea;    
+        kosztpepea = kosztpepea	+ 500000;
+        document.getElementById('pepey').innerHTML = pepe;  
+        document.getElementById('barszcze').innerHTML = barszcz;  
+		document.getElementById('kosztpepeaa').innerHTML = kosztpepea;  
+		document.getElementById('unresty').value = unrest;
+    };
+};
+var pepezkatapultaa = 0;
+var kosztpepezkatapultai = 15000000;
+var kosztpepezkatapultaii = 15000000;
+		function kuppepezkatapultae(){
+    if(barszcz >= kosztpepezkatapultai){ 
+	var snd = new Audio("zasoby/pepezkatapultaa.mp3");
+	snd.play();
+	snd.currentTime=0;		
+        pepezkatapultaa = pepezkatapultaa + 1;                                   
+    	barszcz = barszcz - kosztpepezkatapultai;  
+        unrest = unrest + 80;			
+        kosztpepezkatapultai = kosztpepezkatapultai + 2500000;
+        document.getElementById('pepezkatapultai').innerHTML = pepezkatapultaa;  
+        document.getElementById('barszcze').innerHTML = barszcz;  
+		document.getElementById('kosztpepezkatapultaii').innerHTML = kosztpepezkatapultai;  
+		document.getElementById('unresty').value = unrest;
+    };
+};
+var wizardpepe = 0;
+var kosztwizardpepei = 75000000;
+var kosztwizardpepeii = 75000000;
+		function kupwizardpepee(){
+    if(barszcz >= kosztwizardpepei){ 
+	var snd = new Audio("zasoby/wizardpepe.mp3");
+	snd.play();
+	snd.currentTime=0;		
+        wizardpepe = wizardpepe + 1;                                   
+    	barszcz = barszcz - kosztwizardpepei;  
+        unrest = unrest + 100;			
+        kosztwizardpepei= kosztwizardpepei + 15000000;
+        document.getElementById('wizardpepei').innerHTML = wizardpepe;  
+        document.getElementById('barszcze').innerHTML = barszcz;  
+		document.getElementById('kosztwizardpepeii').innerHTML = kosztwizardpepei;  
+		document.getElementById('unresty').value = unrest;
+    };
+};
+	var kosztunrest4 = 100000;
+	var kosztunrest4i= 100000;
+		 function kupmaxunrest4() {
+	 if (barszcz >= kosztunrest4) { 
+	var snd = new Audio("zasoby/sarna.mp4");
+	snd.play();
+	snd.currentTime=0; 
+        barszcz = barszcz - kosztunrest4;
+		unrest = unrest - 10;
+		kosztunrest4 = kosztunrest4 + 100000; 
+		document.getElementById('barszcze').value = barszcz;
+		document.getElementById('unrest').value = unrest;
+		document.getElementById('unresty').value = unrest;
+		document.getElementById('kosztunrest4').innerHTML = kosztunrest4; 
+		document.getElementById('kosztunrest4i').innerHTML = kosztunrest4; 
+		};
+    }
+</script>
+<table>
+<tr>
+<th>
+<button onClick="kuppepea()"><img src="zasoby/pepe.png"></button><br>
+Pepe: <span id="pepey">0</span></br>
+Przewozi nieumarłych przez Styks. <br>Daje 20000 barszczy na sekundę.<br>
+Koszt: <span id="kosztpepeaa">1000000</span><br><br></th>
+<th>
+<button onClick="kuppepezkatapultae()"><img src="zasoby/pepezkatapulta.png"></button><br>
+Piekielny pepezkatapulta: <span id="pepezkatapultai">0</span></br>
+Średniowieczny mem.<br> Daje 400000 barszczy na sekundę.<br>
+Koszt: <span id="kosztpepezkatapultaii">15000000</span><br><br></th>
+<th>
+<button onClick="kupwizardpepee()"><img src="zasoby/wizardpepe.png"></button><br>
+wizardpepe: <span id="wizardpepei">0</span></br>
+Kupuje dusze i sprzedaje po wyższej cenie.<br> Daje 2500000 barszczy na sekundę.<br>
+Koszt: <span id="kosztwizardpepeii">75000000</span><br><br></th>
+<th>
+<button onClick="kupmaxunrest4()"><img src="zasoby/babcia.png"></button><br>
+Teraz się najesz, a nie tylko krakersy z wodą.<br> Zwiększa wyspanie o 10.<br>
+Koszt: <span id="kosztmilitia3ii">100000</span><br><br></th>
+</tr></table></div>
 <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
