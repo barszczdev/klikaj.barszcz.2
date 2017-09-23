@@ -175,7 +175,7 @@ window.setInterval(function(){
 	snd.currentTime=0;
         barszcz = barszcz - kosztkliku;
         mockliku = mockliku * 2;                                      
-        kosztkliku = kosztkliku	* 3;
+        kosztkliku = kosztkliku	* 2;
         document.getElementById('plusklik').innerHTML = kosztkliku;  
         document.getElementById('barszcze').innerHTML = barszcz;  
 		document.getElementById('mockliku').innerHTML = mockliku;  
@@ -185,7 +185,6 @@ window.setInterval(function(){
  doddom()
  dodlaka()
  dodlasa()
- 
  dodpodstawa()
  dodtechnika()
  doduni()
@@ -220,7 +219,7 @@ window.setInterval(function(){
 		};
     };
 		    function dodlasa() {
-	if (lasa != 0) {
+	if (las != 0) {
 		dodatekzlasi = las * 30;
         barszcz = barszcz + dodatekzlasi;
         document.getElementById('barszcze').value = barszcz;
