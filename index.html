@@ -6,8 +6,16 @@
 body {
 background-image: url(http://freeimage.host/images/2017/09/23/background.png);
 background-repeat: no-repeat;
+background-size:cover;
 }
 -->
+</style>
+<style>
+<!--
+table {
+    border: 0px solid black;
+	-->
+}
 </style>
 <script>
 var wyd1 = true;
@@ -29,16 +37,19 @@ window.setInterval(function(){
 		zdarzenia8()
 }, 1000);
 function zdarzenia1() {
-     if (wyd1 != true && barszcz >= 10){
-	     window.alert("Zarabiasz tak dużo że musisz już płacić 19% podatku Belki.");
-         wyd1 = true;
+     if (wyd1 != true && barszcz >= 1){
+	     window.alert("Nor:Gdzie ja jestem? Halo! Dlaczego jestem w jakimś średniowiecznym sklepie?");
+		 window.alert("Ktoś: Witaj mój czeladniku! Od teraz oddaję ci na własność mój sklep. Teraz możesz stąd inwestować w różne budynki. Niestety nie dam ci nic na początek, abyś zrozumiał że pieniądz nie przychodzi łatwo.");
+         window.alert("Musisz najpierw popracować aby zarobić jakiś pieniądz. Dopiero później możesz rozszerzyć swoje 'strefy wpływów' wysyłając armię dyplomatów na swoich oponentów. Wtedy możesz dopiero zabrać się za inwestowanie. Powodzenia!");
+		 window.alert("Jeszcze jedna rzecz o której zapomniałem. Pamiętaj żeby dobrze się wyspać!");
+		 wyd1 = true;
 	 }
 	 else {
 	 }
 };
 function zdarzenia2() {
      if (wyd2 != true && barszcz >= 1000){
-	     window.alert("Otrzymujesz subsydia dla młodych, początkujących rolnikow w wysokości 500 barszczów.");
+	     window.alert("Otrzymujesz subsydia dla młodych, początkujących sprzedawców w wysokości 500 barszczów.");
          barszcz = barszcz + 500;
          wyd2 = true;
 var snd = new Audio("zasoby/subsydia.mp3");
@@ -50,8 +61,8 @@ snd.currentTime=0;
 };
 function zdarzenia3() {
      if (wyd3 != true && barszcz >= 10000){
-	     window.alert("Wzrosła kwota podatku Belki do 19% i musisz go teraz opłacić. Płacisz 2000 barszczów. ");
-		 barszcz = barszcz - 2000;
+	     window.alert("Ktoś cię okradł w nocy. Tracisz 5000 barszczów. ");
+		 barszcz = barszcz - 5000;
 		 wyd3 = true;
 		 var snd = new Audio("zasoby/pod.mp3");
 	snd.play();
@@ -158,6 +169,8 @@ window.setInterval(function(){
 	var kosztkliku = 50;
 	var kosztklikuu = 50;
 	var plusklik = 50;
+	var maxunrest = 1000;
+	var unrest = 0;
 	function plusklik1() {
 	if(barszcz >= kosztkliku){ 
 	var snd = new Audio("zasoby/barszcz.mp3");
@@ -165,23 +178,49 @@ window.setInterval(function(){
 	snd.currentTime=0;
         barszcz = barszcz - kosztkliku;
         mockliku = mockliku * 2;                                      
-        kosztkliku = kosztkliku	* 2;
+        kosztkliku = kosztkliku	* 3;
         document.getElementById('plusklik').innerHTML = kosztkliku;  
         document.getElementById('barszcze').innerHTML = barszcz;  
 		document.getElementById('mockliku').innerHTML = mockliku;  
-		
 		};
     }
 window.setInterval(function(){
- dodsuchary()
- document.getElementById('mockliku').innerHTML = plik;  
+ doddom()
+ dodlaka()
+ dodlasa()
+ unrestcheck()
+ document.getElementById('mockliku').innerHTML = plik; 
+		document.getElementById('wojsko').value = wojsko;
+		document.getElementById('wojskoo').value = wojsko; 
 }, 1000);
-
-	    function dodsuchary() {
-		if (suchar != 0) {
-		dodatekzsucharow2 = suchar * 99999999;
-        barszcz = barszcz + dodatekzsucharow2;
+    function doddom() {
+	if (dom != 0) {
+		dodatekzdomu = dom;
+        barszcz = barszcz + dodatekzdomu;
         document.getElementById('barszcze').value = barszcz;
+		};
+    };
+	    function dodlaka() {
+	if (laka != 0) {
+		dodatekzlaki = laka * 5;
+        barszcz = barszcz + dodatekzlaki;
+        document.getElementById('barszcze').value = barszcz;
+		};
+    };
+		    function dodlasa() {
+	if (lasa != 0) {
+		dodatekzlasi = las * 5;
+        barszcz = barszcz + dodatekzlasi;
+        document.getElementById('barszcze').value = barszcz;
+		};
+    };
+	    function unrestcheck() {
+	if (unrest > maxunrest) {
+		window.alert("Niewyspanie to unrest. xaxaxaxa 'Twoi' obywatele są bardzo źli. Aż tak, że wszystkie budynki strajkują! ");
+        barszcz = barszcz - barszcz;
+        document.getElementById('barszcze').value = barszcz;
+		document.getElementById('unresty').value = unrest;
+		document.getElementById('maxunresty').value = maxunrest;
 		};
     };
  
@@ -191,21 +230,14 @@ window.setInterval(function(){
 <title>Kliker Barszczu 2 - by transportowiec96</title>
 </head>
 <body>
-<button onClick="zapiszgre()">Zapisz stan barszczu</button>
-<span id="result">Nie zapisano.</span>
-<button onClick="wczytajgre()">Wczytaj stan barszczu</button>
-<span id="result2">Nie wczytano.</span>
-<br>
 <!-- klikanie w barszcz -->
-
-
 <br>
 <script>
     function klik() {
 	var snd = new Audio("zasoby/barszcz.mp3");
 	snd.play();
 	snd.currentTime=0; 
-        barszcz = barszcz + mockliku;
+        barszcz = barszcz + mockliku + 9999;
         document.getElementById('barszcze').value = barszcz;
     }
 	 function kupmilitia() {
@@ -222,8 +254,9 @@ window.setInterval(function(){
 <button src="zasoby/barszcz.png" onclick="klik();"><img src="zasoby/barszcz.png"></button>
 <button src="zasoby/barszcz.png" onclick="kupmilitia();"><img src="zasoby/militia.png"><br>Koszt:<span id="kosztmilitiaa">10</span></button>
 <br>
-Posiadasz: <input type="submit" id="barszcze" value="0"></input> barszczu i <input type="submit" id="wojskoo" value="0"></input> siły wojska.<br>
-Twoja moc klikania wynosi <span id="mockliku">1</span>
+<input type="button" value="Posiadasz:"></input><input type="submit" id="barszcze" value="0"></input><input type="button" value="barszczu i "></input><input type="submit" id="wojskoo" value="0"></input><input type="button" value="siły wojska."></input><br>
+<input type="button" value="Twoje niewyspanie wynosi:"></input><input type="submit" id="unresty" value="0"><input type="button" value="/"><input type="submit" id="maxunrest" value="1000"><br>
+<input type="button" value="Twoja moc klikania wynosi"><span id="mockliku">1</span>
 <button onclick="plusklik1()">Podwój moc kliku.<br>Koszt: <span id="plusklik">50</span></button><br><br>
 <script>
 function pokazostralakefunkcja() {
@@ -243,28 +276,239 @@ function pokazostralakefunkcja() {
 <input type="button" name="answer" value="Zajmij Ostrą Łąkę. Wymaga to 10 chłopów." onclick="pokazostralakefunkcja()" /></div>
 <div id="pokazostralake"  style="display:none;" class="answer_list" >
 <script>
-var suchar = 0;
-var kosztsuchara = 100;
-var kosztsucharaa = 100;
-		function kupsuchara(){
-    if(barszcz >= kosztsuchara){ 
-	var snd = new Audio("zasoby/suchar.mp3");
+var dom = 0;
+var kosztdoma = 100;
+var kosztdomaa = 100;
+		function kupdoma(){
+    if(barszcz >= kosztdoma){ 
+	var snd = new Audio("zasoby/dom.mp3");
 	snd.play();
 	snd.currentTime=0;		
-        suchar = suchar + 1;                                   
-    	barszcz = barszcz - kosztsuchara;    
-        kosztsuchara = kosztsuchara	+ 10;
-        document.getElementById('suchary').innerHTML = suchar;  
+        dom = dom + 1;         
+        unrest = unrest + 1;		
+    	barszcz = barszcz - kosztdoma;    
+        kosztdoma = kosztdoma	+ 10;
+        document.getElementById('domy').innerHTML = dom;  
         document.getElementById('barszcze').innerHTML = barszcz;  
-		document.getElementById('kosztsucharaa').innerHTML = kosztsuchara;  
+		document.getElementById('kosztdomaa').innerHTML = kosztdoma;  
+		document.getElementById('unresty').value = unrest;
     };
 };
+var laka = 0;
+var kosztlaki = 500;
+var kosztlakii = 500;
+		function kuplake(){
+    if(barszcz >= kosztlaki){ 
+	var snd = new Audio("zasoby/laka.mp3");
+	snd.play();
+	snd.currentTime=0;		
+        laka = laka + 1;                                   
+    	barszcz = barszcz - kosztlaki;  
+        unrest = unrest + 2;			
+        kosztdoma = kosztdoma + 50;
+        document.getElementById('laki').innerHTML = laka;  
+        document.getElementById('barszcze').innerHTML = barszcz;  
+		document.getElementById('kosztlakii').innerHTML = kosztlaki;  
+		document.getElementById('unresty').value = unrest;
+    };
+};
+var las = 0;
+var kosztlasi = 3000;
+var kosztlasii = 3000;
+		function kuplase(){
+    if(barszcz >= kosztlasi){ 
+	var snd = new Audio("zasoby/las.mp3");
+	snd.play();
+	snd.currentTime=0;		
+        las = las + 1;                                   
+    	barszcz = barszcz - kosztlasi;  
+        unrest = unrest + 3;			
+        kosztdoma = kosztdoma + 100;
+        document.getElementById('lasi').innerHTML = las;  
+        document.getElementById('barszcze').innerHTML = barszcz;  
+		document.getElementById('kosztlasii').innerHTML = kosztlasi;  
+		document.getElementById('unresty').value = unrest;
+    };
+};
+	 function kupmilitia2e() {
+	 if (barszcz >= 250) { 
+	var snd = new Audio("zasoby/dzik.mp3");
+	snd.play();
+	snd.currentTime=0; 
+        barszcz = barszcz - 250;
+		wojsko = wojsko + 20;
+		kosztmilitia2 = kosztmilitia2 + 250;
+		document.getElementById('wojsko').value = wojsko;
+		document.getElementById('wojskoo').value = wojsko;
+		document.getElementById('kosztmilitia2ii').innerHTML = kosztmilitia2; 
+		};
+    }
+		 function kupmaxunrest1() {
+	 if (barszcz >= 250) { 
+	var snd = new Audio("zasoby/sarna.mp3");
+	snd.play();
+	snd.currentTime=0; 
+        barszcz = barszcz - 250;
+		unrest = unrest - 10;
+		kosztmilitia2 = kosztmilitia2 + 250;
+		document.getElementById('barszcze').value = barszcz;
+		document.getElementById('unrest').value = unrest;
+		document.getElementById('unresty').value = unrest;
+		};
+    }
 </script>
-<button onClick="kupsuchara()"><img src="zasoby/dom.png"></button><br>
-Spoilery: <span id="suchary">0</span></br>
-Fajne są. Dają <span id="sucharpss">99999999</span> barszczy na sekundę.<br>
-Koszt: <span id="kosztsucharaa">100</span><br><br>
-</div>
+<table>
+<tr>
+<th>
+<button onClick="kupdoma()"><img src="zasoby/dom.png"></button><br>
+Dom NoiRa: <span id="domy">0</span></br>
+Tu mieszka Noir. <br>Daje 1 barszcz na sekundę.<br>
+Koszt: <span id="kosztdomaa">100</span><br><br></th>
+<th>
+<button onClick="kuplake()"><img src="zasoby/laka.png"></button><br>
+Łąka: <span id="laki">0</span></br>
+Tu stoi Dom NoiRa.<br> Daje 5 barszczy na sekundę.<br>
+Koszt: <span id="kosztlakii">500</span><br><br></th>
+<th>
+<button onClick="kuplase()"><img src="zasoby/las.png"></button><br>
+Las: <span id="lasi">0</span></br>
+Obok Domu NoiRa.<br> Daje 30 barszczy na sekundę.<br>
+Koszt: <span id="kosztlasii">500</span><br><br></th>
+<th>
+<button onClick="kupmilitia2e()"><img src="zasoby/dzik.png"></button><br>
+Lepsze niż chłopy.<br> Biją jak 20 chłopów.<br>
+Koszt: <span id="kosztmilitia2ii">250</span><br><br></th>
+<th>
+<button onClick="kupmaxunrest1()"><img src="zasoby/sarna.png"></button><br>
+Może być wykorzystana jako poduszka.<br> Zwiększa wyspanie o 10.<br>
+Koszt: <span id="kosztmilitia2ii">250</span><br><br></th>
+</tr></table></div>
+<script>
+function pokazostralakefunkcja() {
+   if (wojsko > 9){
+   wojsko = wojsko - 10;
+   document.getElementById('wojskoo').value = wojsko;
+   document.getElementById('pokazostralake').style.display = "block";
+   document.getElementById('ukryjostralake').style.display = "none";
+   }
+   else
+   {
+   window.alert("Nie masz tyle siły!");
+   }
+};
+</script>
+<div id="ukryjostralake"  style="display:block;" class="answer_list" >
+<input type="button" name="answer" value="Zajmij Czarny Stok. Wymaga to 1000 siły." onclick="pokazostralakefunkcja()" /></div>
+<div id="pokazostralake"  style="display:none;" class="answer_list" >
+<script>
+var dom = 0;
+var kosztdoma = 100;
+var kosztdomaa = 100;
+		function kupdoma(){
+    if(barszcz >= kosztdoma){ 
+	var snd = new Audio("zasoby/dom.mp3");
+	snd.play();
+	snd.currentTime=0;		
+        dom = dom + 1;         
+        unrest = unrest + 1;		
+    	barszcz = barszcz - kosztdoma;    
+        kosztdoma = kosztdoma	+ 10;
+        document.getElementById('domy').innerHTML = dom;  
+        document.getElementById('barszcze').innerHTML = barszcz;  
+		document.getElementById('kosztdomaa').innerHTML = kosztdoma;  
+		document.getElementById('unresty').value = unrest;
+    };
+};
+var laka = 0;
+var kosztlaki = 500;
+var kosztlakii = 500;
+		function kuplake(){
+    if(barszcz >= kosztlaki){ 
+	var snd = new Audio("zasoby/laka.mp3");
+	snd.play();
+	snd.currentTime=0;		
+        laka = laka + 1;                                   
+    	barszcz = barszcz - kosztlaki;  
+        unrest = unrest + 2;			
+        kosztdoma = kosztdoma + 50;
+        document.getElementById('laki').innerHTML = laka;  
+        document.getElementById('barszcze').innerHTML = barszcz;  
+		document.getElementById('kosztlakii').innerHTML = kosztlaki;  
+		document.getElementById('unresty').value = unrest;
+    };
+};
+var las = 0;
+var kosztlasi = 3000;
+var kosztlasii = 3000;
+		function kuplase(){
+    if(barszcz >= kosztlasi){ 
+	var snd = new Audio("zasoby/las.mp3");
+	snd.play();
+	snd.currentTime=0;		
+        las = las + 1;                                   
+    	barszcz = barszcz - kosztlasi;  
+        unrest = unrest + 3;			
+        kosztdoma = kosztdoma + 100;
+        document.getElementById('lasi').innerHTML = las;  
+        document.getElementById('barszcze').innerHTML = barszcz;  
+		document.getElementById('kosztlasii').innerHTML = kosztlasi;  
+		document.getElementById('unresty').value = unrest;
+    };
+};
+	 function kupmilitia2e() {
+	 if (barszcz >= 250) { 
+	var snd = new Audio("zasoby/dzik.mp3");
+	snd.play();
+	snd.currentTime=0; 
+        barszcz = barszcz - 250;
+		wojsko = wojsko + 20;
+		kosztmilitia2 = kosztmilitia2 + 250;
+		document.getElementById('wojsko').value = wojsko;
+		document.getElementById('wojskoo').value = wojsko;
+		document.getElementById('kosztmilitia2ii').innerHTML = kosztmilitia2; 
+		};
+    }
+		 function kupmaxunrest1() {
+	 if (barszcz >= 250) { 
+	var snd = new Audio("zasoby/sarna.mp3");
+	snd.play();
+	snd.currentTime=0; 
+        barszcz = barszcz - 250;
+		unrest = unrest - 10;
+		kosztmilitia2 = kosztmilitia2 + 250;
+		document.getElementById('barszcze').value = barszcz;
+		document.getElementById('unrest').value = unrest;
+		document.getElementById('unresty').value = unrest;
+		};
+    }
+</script>
+<table>
+<tr>
+<th>
+<button onClick="kupdoma()"><img src="zasoby/dom.png"></button><br>
+Dom NoiRa: <span id="domy">0</span></br>
+Tu mieszka Noir. <br>Daje 1 barszcz na sekundę.<br>
+Koszt: <span id="kosztdomaa">100</span><br><br></th>
+<th>
+<button onClick="kuplake()"><img src="zasoby/laka.png"></button><br>
+Łąka: <span id="laki">0</span></br>
+Tu stoi Dom NoiRa.<br> Daje 5 barszczy na sekundę.<br>
+Koszt: <span id="kosztlakii">500</span><br><br></th>
+<th>
+<button onClick="kuplase()"><img src="zasoby/las.png"></button><br>
+Las: <span id="lasi">0</span></br>
+Obok Domu NoiRa.<br> Daje 30 barszczy na sekundę.<br>
+Koszt: <span id="kosztlasii">500</span><br><br></th>
+<th>
+<button onClick="kupmilitia2e()"><img src="zasoby/dzik.png"></button><br>
+Lepsze niż chłopy.<br> Biją jak 20 chłopów.<br>
+Koszt: <span id="kosztmilitia2ii">250</span><br><br></th>
+<th>
+<button onClick="kupmaxunrest1()"><img src="zasoby/sarna.png"></button><br>
+Może być wykorzystana jako poduszka.<br> Zwiększa wyspanie o 10.<br>
+Koszt: <span id="kosztmilitia2ii">250</span><br><br></th>
+</tr></table></div>
+
 <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
