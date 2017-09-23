@@ -18,14 +18,14 @@ table {
 }
 </style>
 <script>
-var wyd1 = true;
-var wyd2 = true;
-var wyd3 = true;
-var wyd4 = true;
-var wyd5 = true;
-var wyd6 = true;
-var wyd7 = true;
-var wyd8 = true;
+var wyd1 = false;
+var wyd2 = false;
+var wyd3 = false;
+var wyd4 = false;
+var wyd5 = false;
+var wyd6 = false;
+var wyd7 = false;
+var wyd8 = false;
 window.setInterval(function(){
         zdarzenia1()
 		zdarzenia2()
@@ -52,7 +52,7 @@ function zdarzenia2() {
 	     window.alert("Otrzymujesz subsydia dla młodych, początkujących sprzedawców w wysokości 500 barszczów.");
          barszcz = barszcz + 500;
          wyd2 = true;
-var snd = new Audio("zasoby/subsydia.mp3");
+var snd = new Audio("zasoby/suchar.mp3");
 snd.play();
 snd.currentTime=0;	
 	 }
@@ -71,7 +71,7 @@ function zdarzenia3() {
 }
 function zdarzenia4() {
      if (wyd4 != true && barszcz >= 100000){
-	     window.alert("Kupujesz prawa budowlane, ponieważ mogą ci się przydać w przyszłości.");
+	     window.alert("Remont biura. Płacisz 20000 za każde biuro które posiadasz.");
 		 barszcz = barszcz - 20000;
 		 wyd4 = true;
 	var snd = new Audio("zasoby/prawa.mp3");
@@ -81,18 +81,15 @@ function zdarzenia4() {
 }
 function zdarzenia5() {
      if (wyd5 != true && barszcz >= 1000000){
-	     window.alert("Księżniczki Peach i Daisy spędziły noc z Mariem i Luigim, ich zdrowie się zwiekszyło, co powoduje wzrost kosztów korzystania z aktualnych Banhammer Bros'ów.");
-		 dyw4 = mloty * 25000;
-		 barszcz = barszcz - dyw4;
-		 wyd5 = true;
-		 		 	var snd = new Audio("zasoby/cen.mp3");
+	     window.alert("Nie chlej tyle cydru!");
+		 		 	var snd = new Audio("zasoby/cydr.mp3");
 	snd.play();
 	snd.currentTime=0;		
 	 }
 }
 function zdarzenia6() {
      if (wyd6 != true && barszcz >= 10000000){
-	     window.alert("Ronald Rump podziwia twoje wyczyny i udzielił ci małej pożyczki w wysokości miliona barszczów.");
+	     window.alert("Kazimierz III podziwia twoje wyczyny i udzielił ci małej pożyczki w wysokości miliona barszczów.");
 		 barszcz = barszcz + 1000000;
 		 wyd6 = true;
 		 	var snd = new Audio("zasoby/poz.mp3");
@@ -102,7 +99,7 @@ function zdarzenia6() {
 }
 function zdarzenia7() {
      if (wyd7 != true && barszcz >= 100000000){
-	     window.alert("Obrońcy praw zwierząt z nieznanego powodu wygrali nieznaną ci sprawę w sądzie, która zakończyła się zmuszeniem cię do grzywny o wysokości całego twojego majątku na rzecz zwierząt.");
+	     window.alert("Obrońcy praw trebuszy z nieznanego powodu wygrali nieznaną ci sprawę w sądzie, która zakończyła się zmuszeniem cię do grzywny o wysokości całego twojego majątku na rzecz trebuszy.");
 		 barszcz = barszcz - 100000000;
 		 wyd7 = true;
 		 	var snd = new Audio("zasoby/obroncy.mp3");
@@ -112,10 +109,10 @@ function zdarzenia7() {
 }
 function zdarzenia8() {
      if (wyd8 != true && barszcz >= 1000000000){
-	     window.alert("Noir jest zestresowany z powodu wymagań 6.0 na zwolnienie z egzaminów. Antyderpesanty sporo kosztują");
+	     window.alert("Jakiś ptak ukradł ci bardzo cenny klejnot. Teraz masz tylko jeden.");
 		 barszcz = barszcz - 500000000;
 		 wyd8 = true;
-		 	var snd = new Audio("zasoby/stres.mp3");
+		 	var snd = new Audio("zasoby/ptak.mp3");
 	snd.play();
 	snd.currentTime=0;		
 	 }
@@ -155,7 +152,7 @@ window.setInterval(function(){
 	var snd = new Audio("zasoby/song.mp3");
 	snd.play();
 	snd.currentTime=0;	
-}, 90000);
+}, 89000);
 window.setInterval(function(){
         document.getElementById("result").innerHTML = "Nie zapisano.";
 	    document.getElementById("result2").innerHTML = "Nie wczytano.";
@@ -188,6 +185,21 @@ window.setInterval(function(){
  doddom()
  dodlaka()
  dodlasa()
+ 
+ dodpodstawa()
+ dodtechnika()
+ doduni()
+ dodcharon()
+ dodshrek()
+ dodszatan()
+ dodpepe()
+ dodwizardpepe()
+ dodkon()
+ dodwoza()
+ dodtransportkoni()
+ dodadept()
+ dodabsolwenta()
+ dodprofesor()
  unrestcheck()
  document.getElementById('mockliku').innerHTML = plik; 
 		document.getElementById('wojsko').value = wojsko;
@@ -209,11 +221,113 @@ window.setInterval(function(){
     };
 		    function dodlasa() {
 	if (lasa != 0) {
-		dodatekzlasi = las * 5;
+		dodatekzlasi = las * 30;
         barszcz = barszcz + dodatekzlasi;
         document.getElementById('barszcze').value = barszcz;
 		};
     };
+	    function dodpodstawa() {
+	if (podstawa != 0) {
+		dodatekzpodstawa = podstawa * 100;
+        barszcz = barszcz + dodatekzpodstawa;
+        document.getElementById('barszcze').value = barszcz;
+		};
+    };
+	    function dodtechnika() {
+	if (technika != 0) {
+		dodatekztechnika = technika * 500;
+        barszcz = barszcz + dodatekztechnika;
+        document.getElementById('barszcze').value = barszcz;
+		};
+    };
+		    function doduni() {
+	if (uni != 0) {
+		dodatekzuni = uni * 3000;
+        barszcz = barszcz + dodatekzuni;
+        document.getElementById('barszcze').value = barszcz;
+		};
+    };
+		    function dodcharon() {
+	if (charon != 0) {
+		dodatekzcharon = charon * 20000;
+        barszcz = barszcz + dodatekzcharon;
+        document.getElementById('barszcze').value = barszcz;
+		};
+    };
+	    function dodshrek() {
+	if (shrek != 0) {
+		dodatekzshreka = shrek * 400000;
+        barszcz = barszcz + dodatekzshreka;
+        document.getElementById('barszcze').value = barszcz;
+		};
+    };
+		    function dodszatan() {
+	if (szatan != 0) {
+		dodatekzszatana = szatan * 2500000;
+        barszcz = barszcz + dodatekzszatana;
+        document.getElementById('barszcze').value = barszcz;
+		};
+    };
+	
+		    function dodpepe() {
+	if (pepe != 0) {
+		dodatekzpepe = pepe * 5000000;
+        barszcz = barszcz + dodatekzpepe;
+        document.getElementById('barszcze').value = barszcz;
+		};
+    };
+	    function dodwizardpepe() {
+	if (wizardpepe != 0) {
+		dodatekzwpepe = wizardpepe * 7500000;
+        barszcz = barszcz + dodatekzwpepe;
+        document.getElementById('barszcze').value = barszcz;
+		};
+    };
+	
+		    function dodkon() {
+	if (kon != 0) {
+		dodatekzkonia = kon * 15000000;
+        barszcz = barszcz + dodatekzkonia;
+        document.getElementById('barszcze').value = barszcz;
+		};
+    };
+	    function dodwoza() {
+	if (woza != 0) {
+		dodatekzwoza = woza * 75000000;
+        barszcz = barszcz + dodatekzwoza;
+        document.getElementById('barszcze').value = barszcz;
+		};
+    };
+		    function dodtransportkoni() {
+	if (tra] != 0) {
+		dodatekztransportu = transportkoni * 600000000;
+        barszcz = barszcz + dodatekztransportu;
+        document.getElementById('barszcze').value = barszcz;
+		};
+    };
+	
+		    function dodadept() {
+	if (adept != 0) {
+		dodatekzadepta = adept * 1500000000;
+        barszcz = barszcz + dodatekzadepta;
+        document.getElementById('barszcze').value = barszcz;
+		};
+    };
+	    function dodabsolwenta() {
+	if (absolwenta != 0) {
+		dodatekzabsolwenta = absolwenta * 7500000000;
+        barszcz = barszcz + dodatekzabsolwenta;
+        document.getElementById('barszcze').value = barszcz;
+		};
+    };
+		    function dodprofesor() {
+	if (profesor != 0) {
+		dodatekzprofesor = profesor * 999999999999999999;
+        barszcz = barszcz + dodatekzprofesor;
+        document.getElementById('barszcze').value = barszcz;
+		};
+    };
+
 	    function unrestcheck() {
 	if (unrest > maxunrest) {
 		window.alert("Niewyspanie to unrest. xaxaxaxa 'Twoi' obywatele są bardzo źli. Aż tak, że wszystkie budynki strajkują! ");
@@ -233,13 +347,16 @@ window.setInterval(function(){
 <!-- klikanie w barszcz -->
 <br>
 <script>
-    function klik() {
+    function klikbae() {
 	var snd = new Audio("zasoby/barszcz.mp3");
 	snd.play();
 	snd.currentTime=0; 
-        barszcz = barszcz + mockliku + 9999999999;
+        barszcz = barszcz + mockliku;
         document.getElementById('barszcze').value = barszcz;
     }
+	</script>
+	<button src="zasoby/barszcz.png" onclick="klikbae()"><img src="zasoby/barszcz.png"></button>
+	<script>
 	 function kupmilitia() {
 	 if (barszcz >= 10) { 
 	var snd = new Audio("zasoby/militia.mp3");
@@ -332,7 +449,6 @@ window.setInterval(function(){
     }
 	
 </script>
-<button src="zasoby/barszcz.png" onclick="klik();"><img src="zasoby/barszcz.png"></button>
 <button src="zasoby/barszcz.png" onclick="kupmilitia()"><img src="zasoby/militia.png"><br>Koszt: 10</button>
 <button src="zasoby/barszcz.png" onclick="kupmilitia2()"><img src="zasoby/dzik.png"><br>Koszt: 100</button>
 <button src="zasoby/barszcz.png" onclick="kupmilitia3()"><img src="zasoby/studenci.png"><br>Koszt: 1000</button>
@@ -703,8 +819,8 @@ function pokazpepelandiafunkcja() {
 <div id="pokazpepelandia"  style="display:none;" class="answer_list" >
 <script>
 var pepe = 0;
-var kosztpepea = 1000000;
-var kosztpepeaa = 1000000;
+var kosztpepea = 10000000;
+var kosztpepeaa = 10000000;
 		function kuppepea(){
     if(barszcz >= kosztpepea){ 
 	var snd = new Audio("zasoby/pepe.mp3");
@@ -721,8 +837,8 @@ var kosztpepeaa = 1000000;
     };
 };
 var wizardpepe = 0;
-var kosztwizardpepei = 75000000;
-var kosztwizardpepeii = 75000000;
+var kosztwizardpepei = 750000000;
+var kosztwizardpepeii = 750000000;
 		function kupwizardpepee(){
     if(barszcz >= kosztwizardpepei){ 
 	var snd = new Audio("zasoby/pepe.mp3");
@@ -761,9 +877,9 @@ var kosztwizardpepeii = 75000000;
 <th>
 <button onClick="kuppepea()"><img src="zasoby/pepe.png"></button><br>
 Pepe: <span id="pepey">0</span></br>
-Średniowieczny mem. <br>Daje 20000 barszczy na sekundę.<br>
-Koszt: <span id="kosztpepeaa">1000000</span><br><br></th>
-<th>
+Średniowieczny mem. <br>Daje 5000000 barszczy na sekundę.<br>
+Koszt: <span id="kosztpepeaa">10000000</span><br><br></th>
+<th>                          
 <button onClick="kupwizardpepee()"><img src="zasoby/wizardpepe.png"></button><br>
 Wizard Pepe: <span id="wizardpepei">0</span></br>
 Czarodziejski średniowieczny mem.<br> Daje 2500000 barszczy na sekundę.<br>
@@ -849,7 +965,7 @@ var koszttransportkoniii = 5000000000;
 	var kosztunrest5 = 2500000;
 	var kosztunrest5i= 2500000;
 		 function kupmaxunrest5() {
-	 if (barszcz >= kosztunrest3) { 
+	 if (barszcz >= kosztunrest5) { 
 	var snd = new Audio("zasoby/kon.mp3");
 	snd.play();
 	snd.currentTime=0; 
@@ -904,18 +1020,18 @@ function pokazpieklo3funkcja() {
 <input type="button" name="answer" value="Zajmij Harward. Wymaga to 1000000000 siły." onclick="pokazpieklo3funkcja()" /></div>
 <div id="pokazpieklo3"  style="display:none;" class="answer_list" >
 <script>
-var adept = 0;
-var kosztadepta = 300000000;
-var kosztadeptaa = 300000000;
+var adept = 0;   
+var kosztadepta = 15000000000;
+var kosztadeptaa = 15000000000;
 		function kupadepta(){
     if(barszcz >= kosztadepta){ 
 	var snd = new Audio("zasoby/adept.mp3");
 	snd.play();
 	snd.currentTime=0;		
         adept = adept + 1;         
-        unrest = unrest + 130;		
+        unrest = unrest + 160;		
     	barszcz = barszcz - kosztadepta;    
-        kosztadepta = kosztadepta	+ 50000000;
+        kosztadepta = kosztadepta	+ 5000000000;
         document.getElementById('adepty').innerHTML = adept;  
         document.getElementById('barszcze').innerHTML = barszcz;  
 		document.getElementById('kosztadeptaa').innerHTML = kosztadepta;  
@@ -923,8 +1039,8 @@ var kosztadeptaa = 300000000;
     };
 };
 var absolwenta = 0;
-var kosztabsolwenti = 1000000000;
-var kosztabsolwentii = 1000000000;
+var kosztabsolwenti = 75000000000;
+var kosztabsolwentii = 75000000000;
 		function kupabsolwente(){
     if(barszcz >= kosztabsolwenti){ 
 	var snd = new Audio("zasoby/absolwent.mp3");
@@ -932,7 +1048,7 @@ var kosztabsolwentii = 1000000000;
 	snd.currentTime=0;		
         absolwenta = absolwenta + 1;                                   
     	barszcz = barszcz - kosztabsolwenti;  
-        unrest = unrest + 140;			
+        unrest = unrest + 170;			
         kosztabsolwenti = kosztabsolwenti + 250000000;
         document.getElementById('absolwenti').innerHTML = absolwenta;  
         document.getElementById('barszcze').innerHTML = barszcz;  
@@ -941,8 +1057,8 @@ var kosztabsolwentii = 1000000000;
     };
 };
 var profesor = 0;    
-var kosztprofesori = 5000000000;
-var kosztprofesorii = 5000000000;
+var kosztprofesori = 999999999999;
+var kosztprofesorii = 999999999999;
 		function kupprofesore(){
     if(barszcz >= kosztprofesori){ 
 	var snd = new Audio("zasoby/woz.mp3");
@@ -950,29 +1066,30 @@ var kosztprofesorii = 5000000000;
 	snd.currentTime=0;		
         profesor = profesor + 1;                                   
     	barszcz = barszcz - kosztprofesori;  
-        unrest = unrest + 150;			
+        unrest = unrest + 200;			
         kosztprofesori= kosztprofesori + 500000000;
         document.getElementById('profesori').innerHTML = profesor;  
         document.getElementById('barszcze').innerHTML = barszcz;  
 		document.getElementById('kosztprofesorii').innerHTML = kosztprofesori;  
 		document.getElementById('unresty').value = unrest;
+		window.alert("NoiR wrócił do swojego mieszkania w Czarnym Stoku. Brawo! Gratulacje! Wygrałeś Barszcz Kliker 2! Nie będę tym razem obiecywał barszcz klikera 3 tak od razu, bo trochę czasu mi zajęło znajdowanie zasobów. W każdym razie dzięki za grę!");
     };
 };
-	var kosztunrest5 = 2500000;
-	var kosztunrest5i= 2500000;
-		 function kupmaxunrest5() {
-	 if (barszcz >= kosztunrest3) { 
+	var kosztunrest9 = 25000000;
+	var kosztunrest9i= 25000000;
+		 function kupmaxunrest9() {
+	 if (barszcz >= kosztunrest9) { 
 	var snd = new Audio("zasoby/kon.mp3");
 	snd.play();
 	snd.currentTime=0; 
-        barszcz = barszcz - kosztunrest5;
-		unrest = unrest - 10;
-		kosztunrest5 = kosztunrest5 + 2500000; 
+        barszcz = barszcz - kosztunrest9;
+		unrest = unrest - 100000000000;
+		kosztunrest9 = kosztunrest9 + 25000000; 
 		document.getElementById('barszcze').value = barszcz;
 		document.getElementById('unrest').value = unrest;
 		document.getElementById('unresty').value = unrest;
-		document.getElementById('kosztunrest5').innerHTML = kosztunrest5; 
-		document.getElementById('kosztunrest5i').innerHTML = kosztunrest5; 
+		document.getElementById('kosztunrest9').innerHTML = kosztunrest9; 
+		document.getElementById('kosztunrest9i').innerHTML = kosztunrest9; 
 		};
     }
 </script>
@@ -980,23 +1097,23 @@ var kosztprofesorii = 5000000000;
 <tr>
 <th>
 <button onClick="kupadepta()"><img src="zasoby/adept.png"></button><br>
-Koń: <span id="adepty">0</span></br>
-Chodzi sobie po ostrej łączce. <br>Daje 15000000 barszczy na sekundę.<br>
+Nowicjusz: <span id="adepty">0</span></br>
+Zaczął dopiero co naukę. <br>Daje 15000000 barszczy na sekundę.<br>
 Koszt: <span id="kosztadeptaa">300000000</span><br><br></th>
 <th>
 <button onClick="kupabsolwente()"><img src="zasoby/absolwent.png"></button><br>
-Wóz: <span id="absolwenti">0</span></br>
-Służy do wożenia.<br> Daje 75000000 barszczy na sekundę.<br>
+Absolwent: <span id="absolwenti">0</span></br>
+Wie znacznie więcej..<br> Daje 75000000 barszczy na sekundę.<br>
 Koszt: <span id="kosztabsolwentii">1000000000</span><br><br></th>
 <th>
-<button onClick="kupprofesore()"><img src="zasoby/profesor.png"></button><br>
-Transport Koni: <span id="profesori">0</span></br>
-Wozi konie za ciebie.<br> Daje 600000000 barszczy na sekundę.<br>
-Koszt: <span id="kosztprofesorii">5000000000</span><br><br></th>
+<button onClick="kupprofesore()"><img src="zasoby/machina.png"></button><br>
+Maszyna czasu: <span id="profesori">0</span></br>
+Wot? Co tu to robi?<br>
+Koszt: <span id="kosztprofesorii">999999999999</span><br><br></th>
 <th>
-<button onClick="kupmaxunrest5()"><img src="zasoby/koncislaw.png"></button><br>
-Teraz ktoś pomoderuje za ciebie.<br> Zwiększa wyspanie o 10.<br>
-Koszt: <span id="kosztunrest5i">2500000</span><br><br></th>
+<button onClick="kupmaxunrest9()"><img src="zasoby/geniusz.png"></button><br>
+Usunie całe niewyspanie.<br>Bo jest geniuszem.<br>
+Koszt: <span id="kosztunrest5i">25000000</span><br><br></th>
 </tr></table></div>
 
 <script type="text/javascript" src="main.js"></script>
