@@ -261,7 +261,7 @@ window.setInterval(function(){
         document.getElementById('barszcze').value = barszcz;
 		};
     };
-		    function dodszatan() {
+			    function dodszatan() {
 	if (szatan != 0) {
 		dodatekzszatana = szatan * 2500000;
         barszcz = barszcz + dodatekzszatana;
@@ -284,6 +284,19 @@ window.setInterval(function(){
 		};
     };
 	
+
+
+	    function unrestcheck() {
+	if (unrest > maxunrest) {
+		window.alert("Niewyspanie to unrest. xaxaxaxa 'Twoi' obywatele są bardzo źli. Aż tak, że wszystkie budynki strajkują! ");
+        barszcz = barszcz - barszcz;
+        document.getElementById('barszcze').value = barszcz;
+		document.getElementById('unresty').value = unrest;
+		document.getElementById('maxunresty').value = maxunrest;
+		};
+    };
+	
+	
 		    function dodkon() {
 	if (kon != 0) {
 		dodatekzkonia = kon * 15000000;
@@ -299,14 +312,13 @@ window.setInterval(function(){
 		};
     };
 		    function dodtransportkoni() {
-	if (tra] != 0) {
+	if (transportkoni != 0) {
 		dodatekztransportu = transportkoni * 600000000;
         barszcz = barszcz + dodatekztransportu;
         document.getElementById('barszcze').value = barszcz;
 		};
     };
-	
-		    function dodadept() {
+	function dodadept() {
 	if (adept != 0) {
 		dodatekzadepta = adept * 1500000000;
         barszcz = barszcz + dodatekzadepta;
@@ -325,16 +337,6 @@ window.setInterval(function(){
 		dodatekzprofesor = profesor * 999999999999999999;
         barszcz = barszcz + dodatekzprofesor;
         document.getElementById('barszcze').value = barszcz;
-		};
-    };
-
-	    function unrestcheck() {
-	if (unrest > maxunrest) {
-		window.alert("Niewyspanie to unrest. xaxaxaxa 'Twoi' obywatele są bardzo źli. Aż tak, że wszystkie budynki strajkują! ");
-        barszcz = barszcz - barszcz;
-        document.getElementById('barszcze').value = barszcz;
-		document.getElementById('unresty').value = unrest;
-		document.getElementById('maxunresty').value = maxunrest;
 		};
     };
  
