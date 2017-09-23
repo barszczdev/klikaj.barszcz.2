@@ -237,7 +237,7 @@ window.setInterval(function(){
 	var snd = new Audio("zasoby/barszcz.mp3");
 	snd.play();
 	snd.currentTime=0; 
-        barszcz = barszcz + mockliku + 99999999;
+        barszcz = barszcz + mockliku + 9999999999;
         document.getElementById('barszcze').value = barszcz;
     }
 	 function kupmilitia() {
@@ -252,7 +252,7 @@ window.setInterval(function(){
     }
 		 function kupmilitia2() {
 	 if (barszcz >= 100) { 
-	var snd = new Audio("zasoby/militia.mp3");
+	var snd = new Audio("zasoby/boar.mp3");
 	snd.play();
 	snd.currentTime=0; 
         barszcz = barszcz - 100;
@@ -282,7 +282,7 @@ window.setInterval(function(){
     }
 		 function kupmilitia5() {
 	 if (barszcz >= 100000) { 
-	var snd = new Audio("zasoby/militia.mp3");
+	var snd = new Audio("zasoby/catapult.mp3");
 	snd.play();
 	snd.currentTime=0; 
         barszcz = barszcz - 100000;
@@ -292,7 +292,7 @@ window.setInterval(function(){
     }
 		 function kupmilitia6() {
 	 if (barszcz >= 1000000) { 
-	var snd = new Audio("zasoby/militia.mp3");
+	var snd = new Audio("zasoby/catapult.mp3");
 	snd.play();
 	snd.currentTime=0; 
         barszcz = barszcz - 1000000;
@@ -302,7 +302,7 @@ window.setInterval(function(){
     }
 		 function kupmilitia7() {
 	 if (barszcz >= 10000000) { 
-	var snd = new Audio("zasoby/militia.mp3");
+	var snd = new Audio("zasoby/trebuchet.mp3");
 	snd.play();
 	snd.currentTime=0; 
         barszcz = barszcz - 10000000;
@@ -312,7 +312,7 @@ window.setInterval(function(){
     }
 		 function kupmilitia8() {
 	 if (barszcz >= 100000000) { 
-	var snd = new Audio("zasoby/militia.mp3");
+	var snd = new Audio("zasoby/rekrut.mp3");
 	snd.play();
 	snd.currentTime=0; 
         barszcz = barszcz - 100000000;
@@ -337,10 +337,10 @@ window.setInterval(function(){
 <button src="zasoby/barszcz.png" onclick="kupmilitia2()"><img src="zasoby/dzik.png"><br>Koszt: 100</button>
 <button src="zasoby/barszcz.png" onclick="kupmilitia3()"><img src="zasoby/studenci.png"><br>Koszt: 1000</button>
 <button src="zasoby/barszcz.png" onclick="kupmilitia4()"><img src="zasoby/ochroniarz.png"><br>Koszt: 10000</button>
-<button src="zasoby/barszcz.png" onclick="kupmilitia5()"><img src="zasoby/militia.png"><br>Koszt: 100000</button>
-<button src="zasoby/barszcz.png" onclick="kupmilitia6()"><img src="zasoby/militia.png"><br>Koszt: 1000000</button>
-<button src="zasoby/barszcz.png" onclick="kupmilitia7()"><img src="zasoby/militia.png"><br>Koszt: 10000000</button>
-<button src="zasoby/barszcz.png" onclick="kupmilitia8()"><img src="zasoby/militia.png"><br>Koszt: 100000000</button>
+<button src="zasoby/barszcz.png" onclick="kupmilitia5()"><img src="zasoby/katapulta.png"><br>Koszt: 100000</button>
+<button src="zasoby/barszcz.png" onclick="kupmilitia6()"><img src="zasoby/mangonel.png"><br>Koszt: 1000000</button>
+<button src="zasoby/barszcz.png" onclick="kupmilitia7()"><img src="zasoby/trebuchet.png"><br>Koszt: 10000000</button>
+<button src="zasoby/barszcz.png" onclick="kupmilitia8()"><img src="zasoby/rekrut.png"><br>Koszt: 100000000</button>
 <button src="zasoby/barszcz.png" onclick="kupmilitia9()"><img src="zasoby/militia.png"><br>Koszt: 1000000000</button>
 <br>
 <input type="button" value="Posiadasz:"></input><input type="submit" id="barszcze" value="0"></input><input type="button" value="barszczu i "></input><input type="submit" id="wojskoo" value="0"></input><input type="button" value="siły wojska."></input><br>
@@ -535,7 +535,7 @@ var kosztuniii = 150000;
 	var kosztunrest3i= 2500;
 		 function kupmaxunrest3() {
 	 if (barszcz >= kosztunrest3) { 
-	var snd = new Audio("zasoby/sarna.mp3");
+	var snd = new Audio("zasoby/profesor.mp3");
 	snd.play();
 	snd.currentTime=0; 
         barszcz = barszcz - kosztunrest3;
@@ -648,7 +648,7 @@ var kosztszatanii = 75000000;
 	var kosztunrest3i= 25000;
 		 function kupmaxunrest3() {
 	 if (barszcz >= kosztunrest3) { 
-	var snd = new Audio("zasoby/sarna.mp3");
+	var snd = new Audio("zasoby/babcia.mp3");
 	snd.play();
 	snd.currentTime=0; 
         barszcz = barszcz - kosztunrest3;
@@ -682,7 +682,7 @@ Koszt: <span id="kosztszatanii">75000000</span><br><br></th>
 <th>
 <button onClick="kupmaxunrest3()"><img src="zasoby/babcia.png"></button><br>
 Teraz się najesz, a nie tylko krakersy z wodą.<br> Zwiększa wyspanie o 10.<br>
-Koszt: <span id="kosztmilitia3ii">25000</span><br><br></th>
+Koszt: <span id="kosztunrest3i">25000</span><br><br></th>
 </tr></table></div>
 <script>
 function pokazpepelandiafunkcja() {
@@ -699,7 +699,7 @@ function pokazpepelandiafunkcja() {
 };
 </script>
 <div id="ukryjpepelandia"  style="display:block;" class="answer_list" >
-<input type="button" name="answer" value="Zajmij Pepelandię. Wymaga to 100000 siły." onclick="pokazpepelandiafunkcja()" /></div>
+<input type="button" name="answer" value="Zajmij Pepelandię. Wymaga to 1000000 siły." onclick="pokazpepelandiafunkcja()" /></div>
 <div id="pokazpepelandia"  style="display:none;" class="answer_list" >
 <script>
 var pepe = 0;
@@ -711,30 +711,12 @@ var kosztpepeaa = 1000000;
 	snd.play();
 	snd.currentTime=0;		
         pepe = pepe + 1;         
-        unrest = unrest + 70;		
+        unrest = unrest + 110;		
     	barszcz = barszcz - kosztpepea;    
         kosztpepea = kosztpepea	+ 500000;
         document.getElementById('pepey').innerHTML = pepe;  
         document.getElementById('barszcze').innerHTML = barszcz;  
 		document.getElementById('kosztpepeaa').innerHTML = kosztpepea;  
-		document.getElementById('unresty').value = unrest;
-    };
-};
-var pepezkatapultaa = 0;
-var kosztpepezkatapultai = 15000000;
-var kosztpepezkatapultaii = 15000000;
-		function kuppepezkatapultae(){
-    if(barszcz >= kosztpepezkatapultai){ 
-	var snd = new Audio("zasoby/pepezkatapultaa.mp3");
-	snd.play();
-	snd.currentTime=0;		
-        pepezkatapultaa = pepezkatapultaa + 1;                                   
-    	barszcz = barszcz - kosztpepezkatapultai;  
-        unrest = unrest + 80;			
-        kosztpepezkatapultai = kosztpepezkatapultai + 2500000;
-        document.getElementById('pepezkatapultai').innerHTML = pepezkatapultaa;  
-        document.getElementById('barszcze').innerHTML = barszcz;  
-		document.getElementById('kosztpepezkatapultaii').innerHTML = kosztpepezkatapultai;  
 		document.getElementById('unresty').value = unrest;
     };
 };
@@ -748,7 +730,7 @@ var kosztwizardpepeii = 75000000;
 	snd.currentTime=0;		
         wizardpepe = wizardpepe + 1;                                   
     	barszcz = barszcz - kosztwizardpepei;  
-        unrest = unrest + 100;			
+        unrest = unrest + 120;			
         kosztwizardpepei= kosztwizardpepei + 15000000;
         document.getElementById('wizardpepei').innerHTML = wizardpepe;  
         document.getElementById('barszcze').innerHTML = barszcz;  
@@ -760,7 +742,7 @@ var kosztwizardpepeii = 75000000;
 	var kosztunrest4i= 100000;
 		 function kupmaxunrest4() {
 	 if (barszcz >= kosztunrest4) { 
-	var snd = new Audio("zasoby/sarna.mp4");
+	var snd = new Audio("zasoby/pepson.mp4");
 	snd.play();
 	snd.currentTime=0; 
         barszcz = barszcz - kosztunrest4;
@@ -779,23 +761,132 @@ var kosztwizardpepeii = 75000000;
 <th>
 <button onClick="kuppepea()"><img src="zasoby/pepe.png"></button><br>
 Pepe: <span id="pepey">0</span></br>
-Przewozi nieumarłych przez Styks. <br>Daje 20000 barszczy na sekundę.<br>
+Średniowieczny mem. <br>Daje 20000 barszczy na sekundę.<br>
 Koszt: <span id="kosztpepeaa">1000000</span><br><br></th>
 <th>
-<button onClick="kuppepezkatapultae()"><img src="zasoby/pepezkatapulta.png"></button><br>
-Piekielny pepezkatapulta: <span id="pepezkatapultai">0</span></br>
-Średniowieczny mem.<br> Daje 400000 barszczy na sekundę.<br>
-Koszt: <span id="kosztpepezkatapultaii">15000000</span><br><br></th>
-<th>
 <button onClick="kupwizardpepee()"><img src="zasoby/wizardpepe.png"></button><br>
-wizardpepe: <span id="wizardpepei">0</span></br>
-Kupuje dusze i sprzedaje po wyższej cenie.<br> Daje 2500000 barszczy na sekundę.<br>
+Wizard Pepe: <span id="wizardpepei">0</span></br>
+Czarodziejski średniowieczny mem.<br> Daje 2500000 barszczy na sekundę.<br>
 Koszt: <span id="kosztwizardpepeii">75000000</span><br><br></th>
 <th>
-<button onClick="kupmaxunrest4()"><img src="zasoby/babcia.png"></button><br>
-Teraz się najesz, a nie tylko krakersy z wodą.<br> Zwiększa wyspanie o 10.<br>
-Koszt: <span id="kosztmilitia3ii">100000</span><br><br></th>
+<button onClick="kupmaxunrest4()"><img src="zasoby/pepson.png"></button><br>
+Zniszczy wszystkie katapulty.<br> Zwiększa wyspanie o 10.<br>
+Koszt: <span id="kosztmilitia4i">100000</span><br><br></th>
 </tr></table></div>
+
+<script>
+function pokazpieklo2funkcja() {
+   if (wojsko > 999999){
+   wojsko = wojsko - 1000000;
+   document.getElementById('wojskoo').value = wojsko;
+   document.getElementById('pokazpieklo2').style.display = "block";
+   document.getElementById('ukryjpieklo2').style.display = "none";
+   }
+   else
+   {
+   window.alert("Nie masz tyle siły!");
+   }
+};
+</script>
+<div id="ukryjpieklo2"  style="display:block;" class="answer_list" >
+<input type="button" name="answer" value="Zajmij Koniowice. Wymaga to 10000000 siły." onclick="pokazpieklo2funkcja()" /></div>
+<div id="pokazpieklo2"  style="display:none;" class="answer_list" >
+<script>
+var kon = 0;
+var kosztkona = 300000000;
+var kosztkonaa = 300000000;
+		function kupkona(){
+    if(barszcz >= kosztkona){ 
+	var snd = new Audio("zasoby/kon.mp3");
+	snd.play();
+	snd.currentTime=0;		
+        kon = kon + 1;         
+        unrest = unrest + 130;		
+    	barszcz = barszcz - kosztkona;    
+        kosztkona = kosztkona	+ 50000000;
+        document.getElementById('kony').innerHTML = kon;  
+        document.getElementById('barszcze').innerHTML = barszcz;  
+		document.getElementById('kosztkonaa').innerHTML = kosztkona;  
+		document.getElementById('unresty').value = unrest;
+    };
+};
+var woza = 0;
+var kosztwozi = 1000000000;
+var kosztwozii = 1000000000;
+		function kupwoze(){
+    if(barszcz >= kosztwozi){ 
+	var snd = new Audio("zasoby/woza.mp3");
+	snd.play();
+	snd.currentTime=0;		
+        woza = woza + 1;                                   
+    	barszcz = barszcz - kosztwozi;  
+        unrest = unrest + 140;			
+        kosztwozi = kosztwozi + 250000000;
+        document.getElementById('wozi').innerHTML = woza;  
+        document.getElementById('barszcze').innerHTML = barszcz;  
+		document.getElementById('kosztwozii').innerHTML = kosztwozi;  
+		document.getElementById('unresty').value = unrest;
+    };
+};
+var transportkoni = 0;    
+var koszttransportkonii = 5000000000;
+var koszttransportkoniii = 5000000000;
+		function kuptransportkonie(){
+    if(barszcz >= koszttransportkonii){ 
+	var snd = new Audio("zasoby/transportkoni.mp3");
+	snd.play();
+	snd.currentTime=0;		
+        transportkoni = transportkoni + 1;                                   
+    	barszcz = barszcz - koszttransportkonii;  
+        unrest = unrest + 150;			
+        koszttransportkonii= koszttransportkonii + 500000000;
+        document.getElementById('transportkonii').innerHTML = transportkoni;  
+        document.getElementById('barszcze').innerHTML = barszcz;  
+		document.getElementById('koszttransportkoniii').innerHTML = koszttransportkonii;  
+		document.getElementById('unresty').value = unrest;
+    };
+};
+	var kosztunrest5 = 2500000;
+	var kosztunrest5i= 2500000;
+		 function kupmaxunrest3() {
+	 if (barszcz >= kosztunrest3) { 
+	var snd = new Audio("zasoby/koncislaw.mp3");
+	snd.play();
+	snd.currentTime=0; 
+        barszcz = barszcz - kosztunrest5;
+		unrest = unrest - 10;
+		kosztunrest5 = kosztunrest5 + 2500000; 
+		document.getElementById('barszcze').value = barszcz;
+		document.getElementById('unrest').value = unrest;
+		document.getElementById('unresty').value = unrest;
+		document.getElementById('kosztunrest5').innerHTML = kosztunrest5; 
+		document.getElementById('kosztunrest5i').innerHTML = kosztunrest5; 
+		};
+    }
+</script>
+<table>
+<tr>
+<th>
+<button onClick="kupkona()"><img src="zasoby/kon.png"></button><br>
+Koń: <span id="kony">0</span></br>
+Chodzi sobie po ostrej łączce. <br>Daje 15000000 barszczy na sekundę.<br>
+Koszt: <span id="kosztkonaa">300000000</span><br><br></th>
+<th>
+<button onClick="kupwoze()"><img src="zasoby/woz.png"></button><br>
+Wóz: <span id="wozi">0</span></br>
+Służy do wożenia..<br> Daje 75000000 barszczy na sekundę.<br>
+Koszt: <span id="kosztwozii">1000000000</span><br><br></th>
+<th>
+<button onClick="kuptransportkonie()"><img src="zasoby/transportkoni.png"></button><br>
+transportkoni: <span id="transportkonii">0</span></br>
+Wozi konie za ciebie.<br> Daje 600000000 barszczy na sekundę.<br>
+Koszt: <span id="koszttransportkoniii">5000000000</span><br><br></th>
+<th>
+<button onClick="kupmaxunrest5()"><img src="zasoby/koncislaw.png"></button><br>
+Teraz ktoś pomoderuje za ciebie.<br> Zwiększa wyspanie o 10.<br>
+Koszt: <span id="kosztunrest5i">2500000</span><br><br></th>
+</tr></table></div>
+
 <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
