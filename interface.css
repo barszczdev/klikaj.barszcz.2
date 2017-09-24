@@ -7,3 +7,9 @@ table {
     border: 0px solid black;
 	
 }
+p {
+    font-size: 14px;
+    color: #fff;
+    
+    text-shadow: 2px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}

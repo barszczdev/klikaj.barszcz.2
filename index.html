@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html lang="pl" >
 <head>
+<script>
+	var snd = new Audio("zasoby/song.mp3");
+	snd.play();
+	snd.currentTime=0;	
+window.setInterval(function(){
+	var snd = new Audio("zasoby/song.mp3");
+	snd.play();
+	snd.currentTime=0;	
+}, 89500);
+</script>
 <link rel="stylesheet" type="text/css" href="interface.css" />
 <script type="text/javascript" src="main.js"></script>
 <title>Kliker Barszczu 2 - by transportowiec96</title>
 </head>
 <body>
+<button onClick="zapiszgre()">Zapisz stan barszczu</button>
+<span id="result"><p>Nie zapisano.</p></span>
+<button onClick="wczytajgre()">Wczytaj stan barszczu</button>
+<span id="result2"><p>Nie wczytano.</p></span>
 <!-- klikanie w barszcz -->
 <br>
 <button src="zasoby/barszcz.png" onclick="klikbae()"><img src="zasoby/barszcz.png"></button>
@@ -13,15 +27,15 @@
 <button src="zasoby/barszcz.png" onclick="kupmilitia2()"><img src="zasoby/dzik.png"><br>Koszt: 100</button>
 <button src="zasoby/barszcz.png" onclick="kupmilitia3()"><img src="zasoby/studenci.png"><br>Koszt: 1000</button>
 <button src="zasoby/barszcz.png" onclick="kupmilitia4()"><img src="zasoby/ochroniarz.png"><br>Koszt: 10000</button>
-<button src="zasoby/barszcz.png" onclick="kupmilitia5()"><img src="zasoby/katapulta.png"><br>Koszt: 100000</button>
-<button src="zasoby/barszcz.png" onclick="kupmilitia6()"><img src="zasoby/mangonel.png"><br>Koszt: 1000000</button>
+<button src="zasoby/barszcz.png" onclick="kupmilitia5()"><img src="zasoby/katapulta.png"><br>oszt: 100000</button>
+<button src="zasoby/barszcz.png" onclick="kupmilitia6()"><img src="zasoby/mangonel.png"><br>oszt: 1000000</button>
 <button src="zasoby/barszcz.png" onclick="kupmilitia7()"><img src="zasoby/trebuchet.png"><br>Koszt: 10000000</button>
 <button src="zasoby/barszcz.png" onclick="kupmilitia8()"><img src="zasoby/rekrut.png"><br>Koszt: 100000000</button>
 <button src="zasoby/barszcz.png" onclick="kupmilitia9()"><img src="zasoby/hussar.png"><br>Koszt: 1000000000</button>
 <br>
 <input type="button" value="Posiadasz:"></input><input type="submit" id="barszcze" value="0"></input><input type="button" value="barszczu i "></input><input type="submit" id="wojskoo" value="0"></input><input type="button" value="siły wojska."></input><br>
 <input type="button" value="Twoje niewyspanie wynosi:"></input><input type="submit" id="unresty" value="0"><input type="button" value="/"><input type="submit" id="maxunrest" value="1000"><br>
-<input type="button" value="Twoja moc klikania wynosi"><span id="mockliku">1</span>
+<input type="button" value="Twoja moc klikania wynosi"><span id="mockliku"><p>1</p></span>
 <button onclick="plusklik1()">Podwój moc kliku.<br>Koszt: <span id="plusklik">50</span></button><br><br>
 <div id="ukryjostralake"  style="display:block;" class="answer_list" >
 <input type="button" name="answer" value="Zajmij Ostrą Łąkę. Wymaga to 10 chłopów." onclick="pokazostralakefunkcja()" /></div>
@@ -30,23 +44,23 @@
 <tr>
 <th>
 <button onClick="kupdoma()"><img src="zasoby/dom.png"></button><br>
-Dom NoiRa: <span id="domy">0</span></br>
-Tu mieszka Noir. <br>Daje 1 barszcz na sekundę.<br>
-Koszt: <span id="kosztdomaa">100</span><br><br></th>
+<p>Dom NoiRa:<span id="domy">0</span></br></p>
+<p>Tu mieszka Noir. <br>Daje 1 barszcz na sekundę.</p></p><br>
+<p>Koszt: <span id="kosztdomaa">100</span><br><br></p></th>
 <th>
 <button onClick="kuplake()"><img src="zasoby/laka.png"></button><br>
-Łąka: <span id="laki">0</span></br>
-Tu stoi Dom NoiRa.<br> Daje 5 barszczy na sekundę.<br>
-Koszt: <span id="kosztlakii">500</span><br><br></th>
+<p>Łąka: <span id="laki">0</span></br></p>
+<p>Tu stoi Dom NoiRa.<br> Daje 5 barszczy na sekundę.</p><br>
+<p>Koszt: <span id="kosztlakii">500</span><br></p><br></th>
 <th>
 <button onClick="kuplase()"><img src="zasoby/las.png"></button><br>
-Las: <span id="lasi">0</span></br>
-Obok Domu NoiRa.<br> Daje 30 barszczy na sekundę.<br>
-Koszt: <span id="kosztlasii">3000</span><br><br></th>
+<p>Las: <span id="lasi">0</span></br></p>
+<p>Obok Domu NoiRa.<br> Daje 30 barszczy na sekundę.</p><br>
+<p>Koszt: <span id="kosztlasii">3000</span><br><br></p></th>
 <th>
 <button onClick="kupmaxunrest2()"><img src="zasoby/sarna.png"></button><br>
-Może być wykorzystana jako poduszka.<br> Zwiększa wyspanie o 10.<br>
-Koszt: <span id="kosztunrest2i">250</span><br><br></th>
+<p>Może być wykorzystana jako poduszka.<br> Zwiększa wyspanie o 10.</p><br>
+<p>Koszt: <span id="kosztunrest2i">250</span><br><br></p></th>
 </tr></table></div>
 <div id="ukryjczarnystok"  style="display:block;" class="answer_list" >
 <input type="button" name="answer" value="Zajmij Czarny Stok. Wymaga to 1000 siły." onclick="pokazczarnystokfunkcja()" /></div>
@@ -55,23 +69,23 @@ Koszt: <span id="kosztunrest2i">250</span><br><br></th>
 <tr>
 <th>
 <button onClick="kuppodstawaa()"><img src="zasoby/podstawowa.png"></button><br>
-Podstawówka: <span id="podstaway">0</span></br>
-Tu uczył się Noir. <br>Daje 100 barszczy na sekundę.<br>
-Koszt: <span id="kosztpodstawaaa">7500</span><br><br></th>
+<p>Podstawówka: <span id="podstaway">0</span></br></p>
+<p>Tu uczył się Noir w alternatywnej rzeczywistości. <br>Daje 100 barszczy na sekundę.</p><br>
+<p>Koszt: <span id="kosztpodstawaaa">7500</span><br></p><br></th>
 <th>
 <button onClick="kuptechnike()"><img src="zasoby/technikum.png"></button><br>
-Technikum: <span id="techniki">0</span></br>
-Tu uczył się NoiR.<br> Daje 500 barszczy na sekundę.<br>
-Koszt: <span id="koszttechnikii">30000</span><br><br></th>
+<p>Technikum: <span id="techniki">0</span></br></p>
+<p>Tu NIE uczył się NoiR.<br> Daje 500 barszczy na sekundę.</p><br>
+<p>Koszt: <span id="koszttechnikii">30000</span><br><br></p></th>
 <th>
 <button onClick="kupunie()"><img src="zasoby/uni.png"></button><br>
-Uniwersytet: <span id="unii">0</span></br>
-Tu uczył się NoiR.<br> Daje 3000 barszczy na sekundę.<br>
-Koszt: <span id="kosztuniii">150000</span><br><br></th>
+<p>Uniwersytet: <span id="unii">0</span></br></p>
+<p>Tu PRAWIE uczył się NoiR.<br> Daje 3000 barszczy na sekundę.<br></p>
+<p>Koszt: <span id="kosztuniii">150000</span><br><br></p></th>
 <th>
-<button onClick="kupmaxunrest3()"><img src="zasoby/profesor.png"></button><br>
-Uczy się za ciebie.<br> Zwiększa wyspanie o 10.<br>
-Koszt: <span id="kosztmilitia3ii">2500</span><br><br></th>
+<button onClick="kupmaxunrest3()"><img src="zasoby/profesor.png"></button></p><br>
+<p>Uczy się za ciebie.<br> Zwiększa wyspanie o 10.<br></p>
+<p>Koszt: <span id="kosztmilitia3ii">2500</span><br><br></p></th>
 </tr></table></div>
 <div id="ukryjpieklo"  style="display:block;" class="answer_list" >
 <input type="button" name="answer" value="Zajmij Piekło. Wymaga to 10000 siły." onclick="pokazpieklofunkcja()" /></div>
@@ -80,23 +94,23 @@ Koszt: <span id="kosztmilitia3ii">2500</span><br><br></th>
 <tr>
 <th>
 <button onClick="kupcharona()"><img src="zasoby/charon.png"></button><br>
-Charon: <span id="charony">0</span></br>
-Przewozi nieumarłych przez Styks. <br>Daje 20000 barszczy na sekundę.<br>
-Koszt: <span id="kosztcharonaa">1000000</span><br><br></th>
+<p>Charon: <span id="charony">0</span></br></p>
+<p>Przewozi nieumarłych przez Styks. <br>Daje 20000 barszczy na sekundę.<br></p>
+<p>Koszt: <span id="kosztcharonaa">1000000</span><br><br></p></th>
 <th>
 <button onClick="kupshreke()"><img src="zasoby/shrek.png"></button><br>
-Piekielny Shrek: <span id="shreki">0</span></br>
-Średniowieczny mem.<br> Daje 400000 barszczy na sekundę.<br>
-Koszt: <span id="kosztshrekii">15000000</span><br><br></th>
+<p>Piekielny Shrek: <span id="shreki">0</span></br></p>
+<p>Średniowieczny mem.<br> Daje 400000 barszczy na sekundę.</p><br>
+<p>Koszt: <span id="kosztshrekii">15000000</span><br></p><br></th>
 <th>
 <button onClick="kupszatane()"><img src="zasoby/szatan.png"></button><br>
-Szatan: <span id="szatani">0</span></br>
-Kupuje dusze i sprzedaje po wyższej cenie.<br> Daje 2500000 barszczy na sekundę.<br>
-Koszt: <span id="kosztszatanii">75000000</span><br><br></th>
+<p>Szatan: <span id="szatani">0</span></br></p>
+<p>Kupuje dusze i sprzedaje po wyższej cenie.<br> Daje 2500000 barszczy na sekundę.</p><br>
+<p>Koszt: <span id="kosztszatanii">75000000</span></p><br><br></th>
 <th>
 <button onClick="kupmaxunrest6()"><img src="zasoby/babcia.png"></button><br>
-Teraz się najesz, a nie tylko krakersy z wodą.<br> Zwiększa wyspanie o 10.<br>
-Koszt: <span id="kosztunrest3i">25000</span><br><br></th>
+<p>Teraz się najesz, a nie tylko krakersy z wodą.<br> Zwiększa wyspanie o 10.</p><br>
+<p>Koszt: <span id="kosztunrest3i">25000</span><br><br></p></th>
 </tr></table></div>
 <div id="ukryjpepelandia"  style="display:block;" class="answer_list" >
 <input type="button" name="answer" value="Zajmij Pepelandię. Wymaga to 100000 siły." onclick="pokazpepelandiafunkcja()" /></div>
@@ -105,18 +119,18 @@ Koszt: <span id="kosztunrest3i">25000</span><br><br></th>
 <tr>
 <th>
 <button onClick="kuppepea()"><img src="zasoby/pepe.png"></button><br>
-Pepe: <span id="pepey">0</span></br>
-Średniowieczny mem. <br>Daje 5000000 barszczy na sekundę.<br>
-Koszt: <span id="kosztpepeaa">10000000</span><br><br></th>
+<p>Pepe: <span id="pepey">0</span></br></p>
+<p>Średniowieczny mem. <br>Daje 5000000 barszczy na sekundę.</p><br>
+<p>Koszt: <span id="kosztpepeaa">10000000</span><br</p>><br></th>
 <th>                          
 <button onClick="kupwizardpepee()"><img src="zasoby/wizardpepe.png"></button><br>
-Wizard Pepe: <span id="wizardpepei">0</span></br>
-Czarodziejski średniowieczny mem.<br> Daje 2500000 barszczy na sekundę.<br>
-Koszt: <span id="kosztwizardpepeii">75000000</span><br><br></th>
+<p>Wizard Pepe: <span id="wizardpepei">0</span></br></p>
+<p>Czarodziejski średniowieczny mem.<br> Daje 2500000 barszczy na sekundę.<br></p>
+<p>Koszt: <span id="kosztwizardpepeii">75000000</span><br><br></p></th>
 <th>
 <button onClick="kupmaxunrest4()"><img src="zasoby/pepson.png"></button><br>
-Zniszczy wszystkie katapulty.<br> Zwiększa wyspanie o 10.<br>
-Koszt: <span id="kosztmilitia4i">100000</span><br><br></th>
+<p>Zniszczy wszystkie katapulty.<br> Zwiększa wyspanie o 10.<br></p>
+<p>Koszt: <span id="kosztmilitia4i">100000</span><br><br></p></th>
 </tr></table></div>
 <div id="ukryjpieklo2"  style="display:block;" class="answer_list" >
 <input type="button" name="answer" value="Zajmij Koniowice. Wymaga to 1000000 siły." onclick="pokazpieklo2funkcja()" /></div>
@@ -125,23 +139,23 @@ Koszt: <span id="kosztmilitia4i">100000</span><br><br></th>
 <tr>
 <th>
 <button onClick="kupkona()"><img src="zasoby/kon.png"></button><br>
-Koń: <span id="kony">0</span></br>
-Chodzi sobie po ostrej łączce. <br>Daje 15000000 barszczy na sekundę.<br>
-Koszt: <span id="kosztkonaa">300000000</span><br><br></th>
+<p>Koń: <span id="kony">0</span></br></p>
+<p>Chodzi sobie po ostrej łączce. <br>Daje 15000000 barszczy na sekundę.<br></p>
+<p>Koszt: <span id="kosztkonaa">300000000</span><br><br></p></th>
 <th>
 <button onClick="kupwoze()"><img src="zasoby/woz.png"></button><br>
-Wóz: <span id="wozi">0</span></br>
-Służy do wożenia.<br> Daje 75000000 barszczy na sekundę.<br>
-Koszt: <span id="kosztwozii">1000000000</span><br><br></th>
+<p>Wóz: <span id="wozi">0</span></br></p>
+<p>Służy do wożenia.<br> Daje 75000000 barszczy na sekundę.<br></p>
+<p>Koszt: <span id="kosztwozii">1000000000</span><br><br></p></th>
 <th>
 <button onClick="kuptransportkonie()"><img src="zasoby/transportkoni.png"></button><br>
-Transport Koni: <span id="transportkonii">0</span></br>
-Wozi konie za ciebie.<br> Daje 600000000 barszczy na sekundę.<br>
-Koszt: <span id="koszttransportkoniii">5000000000</span><br><br></th>
+<p>Transport Koni: <span id="transportkonii">0</span></br></p>
+<p>Wozi konie za ciebie.<br> Daje 600000000 barszczy na sekundę.<br></p>
+<p>Koszt: <span id="koszttransportkoniii">5000000000</span><br></p><br></th>
 <th>
 <button onClick="kupmaxunrest5()"><img src="zasoby/koncislaw.png"></button><br>
-Teraz ktoś pomoderuje za ciebie.<br> Zwiększa wyspanie o 10.<br>
-Koszt: <span id="kosztunrest5i">2500000</span><br><br></th>
+<p>Teraz ktoś pomoderuje za ciebie.<br> Zwiększa wyspanie o 10.<br></p>
+<p>Koszt: <span id="kosztunrest5i">2500000</span><br><br></p></th>
 </tr></table></div>
 <div id="ukryjpieklo3"  style="display:block;" class="answer_list" >
 <input type="button" name="answer" value="Zajmij Harward. Wymaga to 100000000 siły." onclick="pokazpieklo3funkcja()" /></div>
@@ -150,23 +164,23 @@ Koszt: <span id="kosztunrest5i">2500000</span><br><br></th>
 <tr>
 <th>
 <button onClick="kupadepta()"><img src="zasoby/adept.png"></button><br>
-Nowicjusz: <span id="adepty">0</span></br>
-Zaczął dopiero co naukę. <br>Daje 15000000 barszczy na sekundę.<br>
-Koszt: <span id="kosztadeptaa">300000000</span><br><br></th>
+<p>Nowicjusz: <span id="adepty">0</span></br></p>
+<p>Zaczął dopiero co naukę. <br>Daje 15000000 barszczy na sekundę.<br></p>
+<p>Koszt: <span id="kosztadeptaa">300000000</span><br><br></p></th>
 <th>
 <button onClick="kupabsolwente()"><img src="zasoby/absolwent.png"></button><br>
-Absolwent: <span id="absolwenti">0</span></br>
-Wie znacznie więcej..<br> Daje 75000000 barszczy na sekundę.<br>
-Koszt: <span id="kosztabsolwentii">1000000000</span><br><br></th>
+<p>Absolwent: <span id="absolwenti">0</span></br></p>
+<p>Wie znacznie więcej.<br> Daje 75000000 barszczy na sekundę.<br></p>
+<p>Koszt: <span id="kosztabsolwentii">1000000000</span></p><br><br></th>
 <th>
 <button onClick="kupprofesore()"><img src="zasoby/machina.png"></button><br>
-Maszyna czasu: <span id="profesori">0</span></br>
-Wot? Co tu to robi?<br>
-Koszt: <span id="kosztprofesorii">999999999999</span><br><br></th>
+<p>Maszyna czasu: <span id="profesori">0</span></p></br>
+<p>Wot? Co tu to robi?<br></p>
+<p>Koszt: <span id="kosztprofesorii">999999999999</span></p><br><br></th>
 <th>
 <button onClick="kupmaxunrest9()"><img src="zasoby/geniusz.png"></button><br>
-Usunie całe niewyspanie.<br>Bo jest geniuszem.<br>
-Koszt: <span id="kosztunrest5i">25000000</span><br><br></th>
+<p>Usunie całe niewyspanie.<br>Bo jest geniuszem.<br></p>
+<p>Koszt: <span id="kosztunrest5i">25000000</span></p><br><br></th>
 </tr></table></div>
 
 <script type="text/javascript" src="main.js"></script>

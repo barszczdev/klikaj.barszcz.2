@@ -197,14 +197,8 @@ function zdarzenia8() {
 	 }
 }
 
-	var snd = new Audio("zasoby/song.mp3");
-	snd.play();
-	snd.currentTime=0;	
-window.setInterval(function(){
-	var snd = new Audio("zasoby/song.mp3");
-	snd.play();
-	snd.currentTime=0;	
-}, 89500);
+
+
     var barszcz = 0;
 	var wojsko = 0;
     var mockliku = 1;
@@ -858,3 +852,41 @@ var kosztprofesorii = 999999999999;
 		document.getElementById('kosztunrest9i').innerHTML = kosztunrest9; 
 		};
     }
+	
+	function zapiszgre() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.clickcount) {
+            localStorage.clickcount = barszcz;
+			
+
+        } else {
+		    localStorage.clickcount = barszcz;
+        }
+        document.getElementById("result").innerHTML = "Zapisano.";
+    } else {
+        document.getElementById("result").innerHTML = "Twoja przeglądarka nie obsługuje takich zapisów.";
+    }
+}
+function wczytajgre() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.clickcount) {
+		   var wczytywanie = parseInt(localStorage.clickcount)
+		    barszcz = wczytywanie;
+        } else {
+            var wczytywanie = parseInt(localStorage.clickcount)
+		    barszcz = wczytywanie;
+        }
+        document.getElementById("result2").innerHTML = "Wczytano.";
+    } else {
+        document.getElementById("result").innerHTML = "Twoja przeglądarka nie obsługuje takich zapisów.";
+    }
+}
+
+window.setInterval(function(){
+        document.getElementById("result").innerHTML = "Nie zapisano.";
+	    document.getElementById("result2").innerHTML = "Nie wczytano.";
+}, 5000);
+
+window.setInterval(function(){
+        localStorage.clickcount = barszcz + 1;
+}, 30000);
