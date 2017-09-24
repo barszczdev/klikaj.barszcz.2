@@ -214,7 +214,8 @@ function zdarzenia8() {
 	snd.currentTime=0;
         barszcz = barszcz - kosztkliku;
         mockliku = mockliku * 2;                                      
-        kosztkliku = kosztkliku	* 2;
+        kosztkliku = kosztkliku	* 2.25;
+		kosztkliku = Math.round(kosztkliku);
         document.getElementById('plusklik').innerHTML = kosztkliku;  
         document.getElementById('barszcze').innerHTML = barszcz;  
 		document.getElementById('mockliku').innerHTML = mockliku;  
